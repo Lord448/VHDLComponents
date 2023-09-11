@@ -1,0 +1,69 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "DISP[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DISP[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DISPEN",
+					"strict" : false
+				},
+				{
+					"name" : "POINTEN",
+					"strict" : false
+				},
+				{
+					"name" : "NUM[0]",
+					"strict" : false
+				},
+				{
+					"name" : "NUM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "NUM[2]",
+					"strict" : false
+				},
+				{
+					"name" : "NUM[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CEN",
+					"strict" : false
+				},
+				{
+					"name" : "DPEN",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
