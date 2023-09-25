@@ -1,0 +1,21 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+
+entity UInt8ToBCD is
+    port (
+        i_Number : in  std_logic_vector(7 downto 0);
+        o_BCDNumber   : out std_logic_vector(3 downto 0)
+    );
+end entity UInt8ToBCD;
+
+architecture rtl of UInt8ToBCD is
+    
+    signal r_UInt8Number : integer range 0 to 255 := to_unsigned(i_Number, i_Number'lenght);
+
+begin
+    
+    
+    
+end architecture rtl;

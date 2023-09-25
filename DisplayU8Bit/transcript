@@ -1,0 +1,543 @@
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2021.2 linux_x86_64 Apr 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -t 1ps work.tb_UInt8ToBCD 
+# Start time: 00:41:46 on Sep 25,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_uint8tobcd(rtl)#1
+add wave -position end  sim:/tb_uint8tobcd/i_Number
+add wave -position end  sim:/tb_uint8tobcd/o_BCDNumber1
+add wave -position end  sim:/tb_uint8tobcd/o_BCDNumber2
+add wave -position end  sim:/tb_uint8tobcd/o_BCDNumber3
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 0  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 17 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 18 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 19 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 20 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 21 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 22 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 23 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 24 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 25 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 26 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 27 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 28 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 29 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 30 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 31 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 32 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 33 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 34 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 35 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 36 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 37 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 38 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 39 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 40 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 41 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 42 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 43 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 44 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 45 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 46 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 47 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 48 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 49 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 50 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 51 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 52 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 53 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 54 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 55 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 56 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 57 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 58 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 59 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 60 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 61 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 62 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 63 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 64 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 65 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 66 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 67 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 68 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 69 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 70 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 71 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 72 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 73 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 74 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 75 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 76 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 77 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 78 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 79 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 80 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 81 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 82 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 83 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 84 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 85 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 86 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 87 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 88 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 89 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 90 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 91 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 92 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 93 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 94 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 95 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 96 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 97 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 98 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 99 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 100 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 101 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 102 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 103 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 104 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 105 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 106 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 107 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 108 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 109 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 110 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 111 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 112 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 113 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 114 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 115 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 116 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 117 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 118 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 119 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 120 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 121 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 122 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 123 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 124 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 125 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 126 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 127 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 128 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 129 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 130 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 131 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 132 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 133 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 134 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 135 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 136 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 137 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 138 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 139 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 140 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 141 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 142 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 143 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 144 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 145 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 146 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 147 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 148 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 149 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 150 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 151 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 152 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 153 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 154 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 155 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 156 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 157 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 158 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 159 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 160 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 161 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 162 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 163 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 164 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 165 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 166 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 167 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 168 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 169 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 170 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 171 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 172 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 173 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 174 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 175 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 176 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 177 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 178 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 179 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 180 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 181 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 182 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 183 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 184 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 185 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 186 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 187 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 188 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 189 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 190 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 191 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 192 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 193 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 194 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 195 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 196 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 197 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 198 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 199 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 200 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 201 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 202 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 203 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 204 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 205 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 206 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 207 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 208 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 209 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 210 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 211 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 212 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 213 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 214 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 215 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 216 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 217 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 218 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 219 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 220 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 221 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 222 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 223 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 224 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 225 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 226 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 227 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 228 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 229 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 230 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 231 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 232 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 233 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 234 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 235 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 236 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 237 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 238 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 239 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 240 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 241 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 242 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 243 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 244 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 245 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 246 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 247 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 248 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 249 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 250 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 251 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 252 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 253 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 254 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 255 ns  Iteration: 1  Instance: /tb_uint8tobcd/U1
+# End time: 00:43:18 on Sep 25,2023, Elapsed time: 0:01:32
+# Errors: 0, Warnings: 256
