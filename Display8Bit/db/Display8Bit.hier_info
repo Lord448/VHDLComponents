@@ -18,16 +18,16 @@ i_CLK => r_Count[13].CLK
 i_CLK => r_Count[14].CLK
 i_CLK => r_Count[15].CLK
 i_CLK => r_Count[16].CLK
-o_Displays[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-o_Displays[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-o_Displays[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-o_Displays[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-o_Segments[0] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
-o_Segments[1] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
-o_Segments[2] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
-o_Segments[3] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
-o_Segments[4] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
-o_Segments[5] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
-o_Segments[6] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+o_Displays[0] << Mux3.DB_MAX_OUTPUT_PORT_TYPE
+o_Displays[1] << Mux2.DB_MAX_OUTPUT_PORT_TYPE
+o_Displays[2] << Mux1.DB_MAX_OUTPUT_PORT_TYPE
+o_Displays[3] << Mux0.DB_MAX_OUTPUT_PORT_TYPE
+o_Segments[0] << Mux10.DB_MAX_OUTPUT_PORT_TYPE
+o_Segments[1] << Mux9.DB_MAX_OUTPUT_PORT_TYPE
+o_Segments[2] << Mux8.DB_MAX_OUTPUT_PORT_TYPE
+o_Segments[3] << Mux7.DB_MAX_OUTPUT_PORT_TYPE
+o_Segments[4] << Mux6.DB_MAX_OUTPUT_PORT_TYPE
+o_Segments[5] << Mux5.DB_MAX_OUTPUT_PORT_TYPE
+o_Segments[6] << Mux4.DB_MAX_OUTPUT_PORT_TYPE
 
 

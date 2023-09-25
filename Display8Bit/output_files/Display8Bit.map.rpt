@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Display8Bit
-Sun Sep 24 18:11:52 2023
+Mon Sep 25 11:16:22 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Sep 24 18:11:52 2023          ;
+; Analysis & Synthesis Status        ; Successful - Mon Sep 25 11:16:22 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; Display8Bit                                    ;
 ; Top-level Entity Name              ; Display8Bit                                    ;
@@ -151,15 +151,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -268,10 +269,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Sun Sep 24 18:11:46 2023
+    Info: Processing started: Mon Sep 25 11:16:17 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Display8Bit -c Display8Bit
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file Display8Bit.vhd
     Info (12022): Found design unit 1: Display8Bit-rtl File: /home/lord448/altera/VHDLComponents/Display8Bit/Display8Bit.vhd Line: 13
     Info (12023): Found entity 1: Display8Bit File: /home/lord448/altera/VHDLComponents/Display8Bit/Display8Bit.vhd Line: 5
@@ -291,9 +292,9 @@ Info (21057): Implemented 42 device resources after synthesis - the final resour
     Info (21059): Implemented 11 output pins
     Info (21061): Implemented 30 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 521 megabytes
-    Info: Processing ended: Sun Sep 24 18:11:52 2023
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 473 megabytes
+    Info: Processing ended: Mon Sep 25 11:16:22 2023
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:11
 
 

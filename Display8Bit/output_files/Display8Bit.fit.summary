@@ -1,11 +1,11 @@
-Fitter Status : Successful - Sun Sep 24 18:11:55 2023
+Fitter Status : Successful - Mon Sep 25 11:16:25 2023
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : Display8Bit
 Top-level Entity Name : Display8Bit
 Family : Cyclone IV E
 Device : EP4CE6E22C8
 Timing Models : Final
-Total logic elements : 31 / 6,272 ( < 1 % )
+Total logic elements : 32 / 6,272 ( < 1 % )
     Total combinational functions : 30 / 6,272 ( < 1 % )
     Dedicated logic registers : 19 / 6,272 ( < 1 % )
 Total registers : 19
