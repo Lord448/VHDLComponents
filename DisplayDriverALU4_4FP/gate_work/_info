@@ -1,0 +1,159 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP
+T_opt
+!s110 1695689599
+VUH8T^>UH>m`P_]k6@U<^k0
+04 24 3 work tb_displaydriveralu4_4fp rtl 1
+=1-000ae431a4f1-65122b7f-c0c44-e439
+!s124 OEM10U4 
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Ebcdto7segs
+Z2 w1695674151
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 20
+R1
+Z5 8BCDto7Segs.vhd
+Z6 FBCDto7Segs.vhd
+l0
+L5 1
+V8LDaoLalMc7B:25R9>DzH1
+!s100 P6D=7k`HL6i2j`CAO1TcR2
+Z7 OL;C;2021.2;73
+32
+Z8 !s110 1695689594
+!i10b 1
+Z9 !s108 1695689594.000000
+Z10 !s90 BCDto7Segs.vhd|DisplayDriverALU4_4FP.vhd|tb_DisplayDriverALU4_4FP.vhd|
+Z11 !s107 tb_DisplayDriverALU4_4FP.vhd|DisplayDriverALU4_4FP.vhd|BCDto7Segs.vhd|
+!i113 0
+Z12 tExplicit 1 CvgOpt 0
+Artl
+R3
+R4
+DEx4 work 10 bcdto7segs 0 22 8LDaoLalMc7B:25R9>DzH1
+!i122 20
+l30
+L16 39
+V>R[Xkk6j9[AiCkYiSZoTF3
+!s100 ?eObz4mQi^YUX?fURL0k>2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+Edisplaydriveralu4_4fp
+Z13 w1695689576
+Z14 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z15 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z16 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R3
+R4
+!i122 20
+R1
+Z17 8DisplayDriverALU4_4FP.vhd
+Z18 FDisplayDriverALU4_4FP.vhd
+l0
+L6 1
+Vg:5nGX@b>[:YIDL?Un0K`0
+!s100 FG;geg9dzVAP8XlT[QDYZ0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+Artl
+R14
+R15
+R16
+R3
+R4
+DEx4 work 21 displaydriveralu4_4fp 0 22 g:5nGX@b>[:YIDL?Un0K`0
+!i122 20
+l39
+L16 102
+VUo69nPJ4aTlJ40K1EUL2b3
+!s100 ]9lEUP3PN3UVOnTzVj3>_1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+Etb_displaydriveralu4_4fp
+Z19 w1695689580
+R14
+R15
+R16
+R3
+R4
+!i122 20
+R1
+Z20 8tb_DisplayDriverALU4_4FP.vhd
+Z21 Ftb_DisplayDriverALU4_4FP.vhd
+l0
+L6 1
+VN1BOlXU_?I6Z??83ATLgM1
+!s100 9[jGo7N3KoDTkZ?Y2lieT1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+Artl
+R14
+R15
+R16
+R3
+R4
+DEx4 work 24 tb_displaydriveralu4_4fp 0 22 N1BOlXU_?I6Z??83ATLgM1
+!i122 20
+l39
+L9 64
+VkWOzf05=]9;QVF5fiLo=Q2
+!s100 GMTjO=jN_[ShiMb3_<36J0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12

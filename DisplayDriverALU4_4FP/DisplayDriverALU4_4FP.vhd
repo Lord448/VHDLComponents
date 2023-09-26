@@ -1,12 +1,13 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
+use IEEE.std_logic_unsigned.all;
 use IEEE.numeric_std.all;
 
 entity DisplayDriverALU4_4FP is
     port (
         i_CLK       : in  std_logic;
         i_Number    : in  std_logic_vector(7 downto 0);
-        o_Displays  : out std_logic_vector(2 downto 0);
+        o_Displays  : out std_logic_vector(3 downto 0);
         o_Segments  : out std_logic_vector(6 downto 0);
         o_DispPoint : out std_logic
     );
@@ -24,12 +25,16 @@ architecture rtl of DisplayDriverALU4_4FP is
             o_DispPoint       : out std_logic                      --Turns up or down the display point (works with i_DispPoint)
         );
     end component BCDTo7Segs;
-    
-    constant DISP_NEGATIVE_SIGN : std_logic_vector(6 downto 0) := "0111111";
-    constant DISP_POSITIVE_SIGN : std_logic_vector(6 downto 0) := "1111111";
+
+    constant DISP_NEGATIVE_SIGN       : std_logic_vector(6 downto 0) := "0111111";
+    constant DISP_POSITIVE_SIGN       : std_logic_vector(6 downto 0) := "1111111";
+    signal r_Sel                      : std_logic_vector(1 downto 0) := "00";
+    signal r_Show                     : std_logic_vector(3 downto 0) := "0000";
     signal r_IntPNumber, r_DecPNumber : std_logic_vector(3 downto 0);
     signal r_Segs1, r_Segs2           : std_logic_vector(6 downto 0);
-    signal r_NumberSign : std_logic;
+    signal r_SegsConn1, r_SegsConn2   : std_logic_vector(6 downto 0);
+    signal r_NumberSign               : std_logic;
+    signal r_Count                    : integer range 0 to 100000;
 
 begin
     
@@ -37,7 +42,7 @@ begin
         i_DispPoint       => '1',
         i_ChipEN          => '1',
         i_Number          => r_IntPNumber,
-        o_DisplaySegments => r_Segs1,
+        o_DisplaySegments => r_SegsConn1,
         o_DispPoint       => o_DispPoint
     );
 
@@ -45,13 +50,13 @@ begin
         i_DispPoint        => '0',
         i_ChipEN           => '1',
         i_Number           => r_DecPNumber,
-        o_DisplaySegment   => r_Segs2
+        o_DisplaySegments   => r_SegsConn2
     );
 
     clkCount : process(i_CLK)
     begin
         if rising_edge(i_CLK) then
-            if r_Count < 100000 then
+            if r_Count < 10 then --100000
                 r_Count <= r_Count + 1;
             else 
                 r_Sel <= r_Sel + 1;
@@ -60,8 +65,10 @@ begin
         end if;
     end process;
 
-    ShowDisplays : process(r_Sel)
+    ShowDisplays : process(r_Sel, r_NumberSign, r_SegsConn1, r_SegsConn2, r_Segs1, r_Segs2, r_Show)
     begin
+        r_Segs1 <= r_SegsConn1;
+        r_Segs2 <= r_SegsConn2;
         case r_Sel is
             when "00" => 
                 r_Show <= "1110";
@@ -98,6 +105,10 @@ begin
                 o_Segments <= "1111111";
         end case;    
     end process;
+    
+    r_IntPNumber <= i_Number(7 downto 4);
+
+    r_DecPNumber <= i_Number(3 downto 0);
 
     o_Displays <= r_Show;
 

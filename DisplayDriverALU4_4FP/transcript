@@ -1,0 +1,43 @@
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2021.2 linux_x86_64 Apr 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -t 1fs work.tb_DisplayDriverALU4_4FP 
+# Start time: 18:53:19 on Sep 25,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_displaydriveralu4_4fp(rtl)#1
+add wave -position end  sim:/tb_displaydriveralu4_4fp/i_CLK
+add wave -position end  sim:/tb_displaydriveralu4_4fp/i_Number
+add wave -position end  sim:/tb_displaydriveralu4_4fp/o_Displays
+add wave -position end  sim:/tb_displaydriveralu4_4fp/o_Segments
+run
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+#############  Autofindloop Analysis  ###############
+#############  Loop found at time 2760 fs ###############
+#       Signal: /tb_displaydriveralu4_4fp/U1/r_Segs2 @ sub-iteration 0 at Value unknown (DisplayDriverALU4_4FP.vhd:34)
+#       Signal: /tb_displaydriveralu4_4fp/U1/r_Segs1 @ sub-iteration 0 at Value unknown (DisplayDriverALU4_4FP.vhd:34)
+#   Active process: /tb_displaydriveralu4_4fp/U1/ShowDisplays @ sub-iteration 1
+#     Source: tb_DisplayDriverALU4_4FP.vhd:41
+#       Signal: /tb_displaydriveralu4_4fp/U1/r_Segs2 @ sub-iteration 2 at Value unknown (DisplayDriverALU4_4FP.vhd:34)
+################# END OF LOOP #################
+# ** Error (suppressible): (vsim-3601) Iteration limit 10000000 reached at time 2760 fs.
+# End time: 18:55:13 on Sep 25,2023, Elapsed time: 0:01:54
+# Errors: 1, Warnings: 0
