@@ -19,13 +19,14 @@
 #
 # Quartus Prime
 # Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-# Date created = 11:21:19  September 25, 2023
+# Date created = 16:34:35  September 27, 2023
 #
 # -------------------------------------------------------------------------- #
 
 QUARTUS_VERSION = "22.1"
-DATE = "11:21:19  September 25, 2023"
+DATE = "16:34:35  September 27, 2023"
 
 # Revisions
 
 PROJECT_REVISION = "DisplayDriverALU4_4FP"
+PROJECT_REVISION = "DisplayDriverALU4_4F"

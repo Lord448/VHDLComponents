@@ -30,8 +30,10 @@ architecture rtl of DisplayDriverALU4_4FP is
     constant DISP_POSITIVE_SIGN       : std_logic_vector(6 downto 0) := "1111111";
     signal r_Sel                      : std_logic_vector(1 downto 0) := "00";
     signal r_Show                     : std_logic_vector(3 downto 0) := "0000";
+    signal r_Number                   : std_logic_vector(7 downto 0);
     signal r_IntPNumber, r_DecPNumber : std_logic_vector(3 downto 0);
     signal r_Segs1, r_Segs2           : std_logic_vector(6 downto 0);
+    signal r_SegsNeg1, r_SegsNeg2     : std_logic_vector(6 downto 0);
     signal r_SegsConn1, r_SegsConn2   : std_logic_vector(6 downto 0);
     signal r_NumberSign               : std_logic;
     signal r_Count                    : integer range 0 to 100000;
@@ -56,7 +58,7 @@ begin
     clkCount : process(i_CLK)
     begin
         if rising_edge(i_CLK) then
-            if r_Count < 10 then --100000
+            if r_Count < 100000 then --100000
                 r_Count <= r_Count + 1;
             else 
                 r_Sel <= r_Sel + 1;
@@ -65,7 +67,7 @@ begin
         end if;
     end process;
 
-    ShowDisplays : process(r_Sel, r_NumberSign, r_SegsConn1, r_SegsConn2, r_Segs1, r_Segs2, r_Show)
+    ShowDisplays : process(r_Sel)
     begin
         r_Segs1 <= r_SegsConn1;
         r_Segs2 <= r_SegsConn2;
@@ -81,13 +83,6 @@ begin
             when others =>
                 r_Show <= "1111";
         end case;
-        
-        if r_NumberSign = '1' then
-            r_Segs1 <= r_Segs1 + 1;
-            r_Segs1 <= not r_Segs1; 
-            r_Segs2 <= r_Segs2 + 1;
-            r_Segs2 <= not r_Segs2; 
-        end if;
 
         case r_Show is
             when "1101" => --3
@@ -95,20 +90,23 @@ begin
             when "1011" => --2
                 o_Segments <= r_Segs1;
             when "0111" => --1
-                case r_NumberSign is
-                    when '1' =>
-                        o_Segments <= DISP_NEGATIVE_SIGN;
-                    when others =>
-                        o_Segments <= DISP_POSITIVE_SIGN;
-                end case;
+                if r_NumberSign = '1' then 
+                    o_Segments <= DISP_NEGATIVE_SIGN;
+                else
+                    o_Segments <= DISP_POSITIVE_SIGN;
+                end if;
             when others =>
                 o_Segments <= "1111111";
         end case;    
     end process;
-    
-    r_IntPNumber <= i_Number(7 downto 4);
 
-    r_DecPNumber <= i_Number(3 downto 0);
+    with r_NumberSign select r_Number <= 
+            not(i_Number+1) when '1',
+            i_Number        when others;
+
+    r_IntPNumber <= r_Number(7 downto 4);
+
+    r_DecPNumber <= r_Number(3 downto 0);
 
     o_Displays <= r_Show;
 
