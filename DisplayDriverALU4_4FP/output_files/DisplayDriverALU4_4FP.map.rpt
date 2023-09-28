@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DisplayDriverALU4_4FP
-Wed Sep 27 16:35:09 2023
+Wed Sep 27 18:01:06 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -46,7 +46,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Sep 27 16:35:09 2023          ;
+; Analysis & Synthesis Status        ; Successful - Wed Sep 27 18:01:06 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; DisplayDriverALU4_4FP                          ;
 ; Top-level Entity Name              ; DisplayDriverALU4_4FP                          ;
@@ -203,8 +203,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;             ;
 ; Maximum fan-out node                        ; LessThan0~3 ;
 ; Maximum fan-out                             ; 19          ;
-; Total fan-out                               ; 274         ;
-; Average fan-out                             ; 2.17        ;
+; Total fan-out                               ; 275         ;
+; Average fan-out                             ; 2.18        ;
 +---------------------------------------------+-------------+
 
 
@@ -264,6 +264,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; i_disppoint  ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; i_chipen     ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; o_dispenable ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; o_disppoint  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -276,18 +277,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cycloneiii_ff         ; 19                          ;
 ;     SCLR              ; 17                          ;
 ;     plain             ; 2                           ;
-; cycloneiii_lcell_comb ; 66                          ;
+; cycloneiii_lcell_comb ; 65                          ;
 ;     arith             ; 23                          ;
 ;         2 data inputs ; 23                          ;
-;     normal            ; 43                          ;
-;         0 data inputs ; 1                           ;
+;     normal            ; 42                          ;
 ;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 6                           ;
 ;         3 data inputs ; 9                           ;
 ;         4 data inputs ; 25                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.30                        ;
-; Average LUT depth     ; 3.47                        ;
+; Average LUT depth     ; 3.50                        ;
 +-----------------------+-----------------------------+
 
 
@@ -306,7 +306,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Wed Sep 27 16:35:04 2023
+    Info: Processing started: Wed Sep 27 18:01:00 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DisplayDriverALU4_4FP -c DisplayDriverALU4_4FP
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -317,15 +317,13 @@ Info (12021): Found 2 design units, including 1 entities, in source file BCDto7S
     Info (12022): Found design unit 1: BCDto7Segs-rtl File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/BCDto7Segs.vhd Line: 16
     Info (12023): Found entity 1: BCDto7Segs File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/BCDto7Segs.vhd Line: 5
 Info (12127): Elaborating entity "DisplayDriverALU4_4FP" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(72): signal "r_SegsConn1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 72
-Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(73): signal "r_SegsConn2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 73
-Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(87): signal "r_Show" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 87
-Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(89): signal "r_Segs2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 89
+Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(71): signal "r_SegsConn1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 71
+Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(72): signal "r_SegsConn2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 72
+Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(86): signal "r_Show" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 86
+Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(88): signal "r_Segs2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 88
 Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(91): signal "r_Segs1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 91
-Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(93): signal "r_NumberSign" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 93
+Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(95): signal "r_NumberSign" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 95
 Info (12128): Elaborating entity "BCDto7Segs" for hierarchy "BCDto7Segs:DisplayDecoder1" File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 43
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "o_DispPoint" is stuck at VCC File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 12
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -333,10 +331,10 @@ Info (21057): Implemented 86 device resources after synthesis - the final resour
     Info (21058): Implemented 9 input pins
     Info (21059): Implemented 12 output pins
     Info (21061): Implemented 65 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 506 megabytes
-    Info: Processing ended: Wed Sep 27 16:35:09 2023
-    Info: Elapsed time: 00:00:05
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 512 megabytes
+    Info: Processing ended: Wed Sep 27 18:01:06 2023
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:19
 
 

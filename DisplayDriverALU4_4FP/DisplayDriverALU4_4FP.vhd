@@ -44,8 +44,7 @@ begin
         i_DispPoint       => '1',
         i_ChipEN          => '1',
         i_Number          => r_IntPNumber,
-        o_DisplaySegments => r_SegsConn1,
-        o_DispPoint       => o_DispPoint
+        o_DisplaySegments => r_SegsConn1
     );
 
     DisplayDecoder2 : BCDTo7Segs port map (
@@ -87,9 +86,12 @@ begin
         case r_Show is
             when "1101" => --3
                 o_Segments <= r_Segs2;
+                o_DispPoint <= '1'; --Turn off the point led
             when "1011" => --2
                 o_Segments <= r_Segs1;
+                o_DispPoint <= '0'; --Turn on the point led 
             when "0111" => --1
+                o_DispPoint <= '1'; --Turn off the point led
                 if r_NumberSign = '1' then 
                     o_Segments <= DISP_NEGATIVE_SIGN;
                 else
@@ -97,6 +99,7 @@ begin
                 end if;
             when others =>
                 o_Segments <= "1111111";
+                o_DispPoint <= '1'; --Turn off the point led
         end case;    
     end process;
 

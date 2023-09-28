@@ -1,5 +1,5 @@
 Fitter report for DisplayDriverALU4_4FP
-Wed Sep 27 16:34:44 2023
+Wed Sep 27 18:01:09 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Wed Sep 27 16:34:44 2023          ;
+; Fitter Status                      ; Successful - Wed Sep 27 18:01:09 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; DisplayDriverALU4_4FP                          ;
 ; Top-level Entity Name              ; DisplayDriverALU4_4FP                          ;
@@ -257,11 +257,11 @@ The pin-out file can be found in /home/lord448/altera/VHDLComponents/DisplayDriv
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )        ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )        ;
 ; Average interconnect usage (total/H/V)      ; 0.2% / 0.2% / 0.3%   ;
-; Peak interconnect usage (total/H/V)         ; 0.5% / 0.4% / 0.6%   ;
+; Peak interconnect usage (total/H/V)         ; 0.5% / 0.5% / 0.7%   ;
 ; Maximum fan-out                             ; 19                   ;
 ; Highest non-global fan-out                  ; 19                   ;
-; Total fan-out                               ; 282                  ;
-; Average fan-out                             ; 2.03                 ;
+; Total fan-out                               ; 283                  ;
+; Average fan-out                             ; 2.04                 ;
 +---------------------------------------------+----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -309,7 +309,7 @@ The pin-out file can be found in /home/lord448/altera/VHDLComponents/DisplayDriv
 ;     -- Registered Output Connections        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Internal Connections                        ;                     ;                                ;
-;     -- Total Connections                    ; 277                 ; 5                              ;
+;     -- Total Connections                    ; 278                 ; 5                              ;
 ;     -- Registered Connections               ; 56                  ; 0                              ;
 ;                                             ;                     ;                                ;
 ; External Connections                        ;                     ;                                ;
@@ -619,10 +619,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; o_Segments[5] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; o_Segments[6] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; o_DispPoint   ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; i_Number[4]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; i_Number[4]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; i_Number[7]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; i_Number[3]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; i_Number[2]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; i_Number[2]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; i_Number[1]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; i_Number[0]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; i_Number[5]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
@@ -637,8 +637,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout      ; Pad To Core Index ; Setting ;
 +--------------------------+-------------------+---------+
 ; i_Number[4]              ;                   ;         ;
-;      - Add2~8            ; 1                 ; 6       ;
-;      - r_IntPNumber[0]~0 ; 1                 ; 6       ;
+;      - Add2~8            ; 0                 ; 6       ;
+;      - r_IntPNumber[0]~0 ; 0                 ; 6       ;
 ; i_Number[7]              ;                   ;         ;
 ;      - Add2~14           ; 1                 ; 6       ;
 ;      - r_IntPNumber[0]~0 ; 1                 ; 6       ;
@@ -654,8 +654,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Add2~6            ; 0                 ; 6       ;
 ;      - r_DecPNumber[3]~3 ; 0                 ; 6       ;
 ; i_Number[2]              ;                   ;         ;
-;      - Add2~4            ; 0                 ; 6       ;
-;      - r_DecPNumber[2]~2 ; 0                 ; 6       ;
+;      - Add2~4            ; 1                 ; 6       ;
+;      - r_DecPNumber[2]~2 ; 1                 ; 6       ;
 ; i_Number[1]              ;                   ;         ;
 ;      - Add2~2            ; 0                 ; 6       ;
 ;      - r_DecPNumber[1]~1 ; 0                 ; 6       ;
@@ -672,14 +672,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------+-------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                         ;
-+-------------+--------------------+---------+-------------+--------+----------------------+------------------+---------------------------+
-; Name        ; Location           ; Fan-Out ; Usage       ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-------------+--------------------+---------+-------------+--------+----------------------+------------------+---------------------------+
-; LessThan0~3 ; LCCOMB_X22_Y20_N12 ; 19      ; Sync. clear ; no     ; --                   ; --               ; --                        ;
-; i_CLK       ; PIN_23             ; 19      ; Clock       ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-+-------------+--------------------+---------+-------------+--------+----------------------+------------------+---------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                        ;
++-------------+-------------------+---------+-------------+--------+----------------------+------------------+---------------------------+
+; Name        ; Location          ; Fan-Out ; Usage       ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------------+-------------------+---------+-------------+--------+----------------------+------------------+---------------------------+
+; LessThan0~3 ; LCCOMB_X23_Y20_N4 ; 19      ; Sync. clear ; no     ; --                   ; --               ; --                        ;
+; i_CLK       ; PIN_23            ; 19      ; Clock       ; yes    ; Global Clock         ; GCLK2            ; --                        ;
++-------------+-------------------+---------+-------------+--------+----------------------+------------------+---------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------+
@@ -697,13 +697,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Routing Resource Type ; Usage                 ;
 +-----------------------+-----------------------+
 ; Block interconnects   ; 53 / 32,401 ( < 1 % ) ;
-; C16 interconnects     ; 7 / 1,326 ( < 1 % )   ;
-; C4 interconnects      ; 35 / 21,816 ( < 1 % ) ;
+; C16 interconnects     ; 8 / 1,326 ( < 1 % )   ;
+; C4 interconnects      ; 32 / 21,816 ( < 1 % ) ;
 ; Direct links          ; 12 / 32,401 ( < 1 % ) ;
 ; Global clocks         ; 1 / 10 ( 10 % )       ;
 ; Local interconnects   ; 35 / 10,320 ( < 1 % ) ;
-; R24 interconnects     ; 8 / 1,289 ( < 1 % )   ;
-; R4 interconnects      ; 34 / 28,186 ( < 1 % ) ;
+; R24 interconnects     ; 10 / 1,289 ( < 1 % )  ;
+; R4 interconnects      ; 31 / 28,186 ( < 1 % ) ;
 +-----------------------+-----------------------+
 
 
@@ -969,7 +969,7 @@ Info (176353): Automatically promoted node i_CLK~input (placed in PIN 23 (CLK1, 
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -987,7 +987,7 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169177): 8 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
     Info (169178): Pin i_Number[4] uses I/O standard 3.3-V LVCMOS at 76 File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 9
@@ -1000,8 +1000,8 @@ Warning (169177): 8 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2
     Info (169178): Pin i_Number[6] uses I/O standard 3.3-V LVCMOS at 80 File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 9
 Info (144001): Generated suppressed messages file /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/output_files/DisplayDriverALU4_4FP.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1945 megabytes
-    Info: Processing ended: Wed Sep 27 16:34:44 2023
+    Info: Peak virtual memory: 1932 megabytes
+    Info: Processing ended: Wed Sep 27 18:01:10 2023
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:04
 
