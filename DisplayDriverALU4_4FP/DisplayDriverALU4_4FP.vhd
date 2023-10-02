@@ -154,8 +154,8 @@ begin
         not(i_Number-1) when '1',
         i_Number        when others;
     with r_NumberSign select r_Number8 <=
-        not(i_Number(11 downto 4)-1) when '1',
-        i_Number(11 downto 4) when others;
+        not(i_Number(7 downto 0)-1) when '1',
+        i_Number(7 downto 0) when others;
 
     --Integer Part
     with i_MultOp select r_IntPNumber(7 downto 4) <= --0000 XXXX . XXXX XXXX

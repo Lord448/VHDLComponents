@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DisplayDriverALU4_4FP
-Sun Oct  1 22:27:05 2023
+Sun Oct  1 23:02:18 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -48,13 +48,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Oct  1 22:27:05 2023          ;
+; Analysis & Synthesis Status        ; Successful - Sun Oct  1 23:02:18 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; DisplayDriverALU4_4FP                          ;
 ; Top-level Entity Name              ; DisplayDriverALU4_4FP                          ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 130                                            ;
-;     Total combinational functions  ; 130                                            ;
+; Total logic elements               ; 127                                            ;
+;     Total combinational functions  ; 127                                            ;
 ;     Dedicated logic registers      ; 19                                             ;
 ; Total registers                    ; 19                                             ;
 ; Total pins                         ; 31                                             ;
@@ -165,8 +165,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-16        ;   0.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -180,36 +179,36 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-; Estimated Total logic elements              ; 130      ;
-;                                             ;          ;
-; Total combinational functions               ; 130      ;
-; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 70       ;
-;     -- 3 input functions                    ; 11       ;
-;     -- <=2 input functions                  ; 49       ;
-;                                             ;          ;
-; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 92       ;
-;     -- arithmetic mode                      ; 38       ;
-;                                             ;          ;
-; Total registers                             ; 19       ;
-;     -- Dedicated logic registers            ; 19       ;
-;     -- I/O registers                        ; 0        ;
-;                                             ;          ;
-; I/O pins                                    ; 31       ;
-;                                             ;          ;
-; Embedded Multiplier 9-bit elements          ; 0        ;
-;                                             ;          ;
-; Maximum fan-out node                        ; r_Sel[0] ;
-; Maximum fan-out                             ; 25       ;
-; Total fan-out                               ; 507      ;
-; Average fan-out                             ; 2.40     ;
-+---------------------------------------------+----------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 127            ;
+;                                             ;                ;
+; Total combinational functions               ; 127            ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 75             ;
+;     -- 3 input functions                    ; 6              ;
+;     -- <=2 input functions                  ; 46             ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 89             ;
+;     -- arithmetic mode                      ; 38             ;
+;                                             ;                ;
+; Total registers                             ; 19             ;
+;     -- Dedicated logic registers            ; 19             ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 31             ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; i_MultOp~input ;
+; Maximum fan-out                             ; 27             ;
+; Total fan-out                               ; 506            ;
+; Average fan-out                             ; 2.43           ;
++---------------------------------------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -217,7 +216,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                               ; Entity Name           ; Library Name ;
 +---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+-----------------------+--------------+
-; |DisplayDriverALU4_4FP          ; 130 (102)           ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 31   ; 0            ; |DisplayDriverALU4_4FP                            ; DisplayDriverALU4_4FP ; work         ;
+; |DisplayDriverALU4_4FP          ; 127 (99)            ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 31   ; 0            ; |DisplayDriverALU4_4FP                            ; DisplayDriverALU4_4FP ; work         ;
 ;    |BCDto7Segs:DisplayDecoder1| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DisplayDriverALU4_4FP|BCDto7Segs:DisplayDecoder1 ; BCDto7Segs            ; work         ;
 ;    |BCDto7Segs:DisplayDecoder2| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DisplayDriverALU4_4FP|BCDto7Segs:DisplayDecoder2 ; BCDto7Segs            ; work         ;
 ;    |BCDto7Segs:DisplayDecoder3| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DisplayDriverALU4_4FP|BCDto7Segs:DisplayDecoder3 ; BCDto7Segs            ; work         ;
@@ -246,7 +245,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |DisplayDriverALU4_4FP|r_DecPNumber[4] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |DisplayDriverALU4_4FP|r_DecPNumber[4] ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |DisplayDriverALU4_4FP|r_IntPNumber[6] ;
 ; 21:1               ; 6 bits    ; 84 LEs        ; 18 LEs               ; 66 LEs                 ; No         ; |DisplayDriverALU4_4FP|o_Segments      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
@@ -309,17 +308,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cycloneiii_ff         ; 19                          ;
 ;     SCLR              ; 17                          ;
 ;     plain             ; 2                           ;
-; cycloneiii_lcell_comb ; 133                         ;
+; cycloneiii_lcell_comb ; 130                         ;
 ;     arith             ; 38                          ;
 ;         2 data inputs ; 38                          ;
-;     normal            ; 95                          ;
+;     normal            ; 92                          ;
 ;         1 data inputs ; 6                           ;
-;         2 data inputs ; 8                           ;
-;         3 data inputs ; 11                          ;
-;         4 data inputs ; 70                          ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 6                           ;
+;         4 data inputs ; 75                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 8.10                        ;
-; Average LUT depth     ; 5.70                        ;
+; Average LUT depth     ; 5.59                        ;
 +-----------------------+-----------------------------+
 
 
@@ -338,7 +337,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Sun Oct  1 22:26:59 2023
+    Info: Processing started: Sun Oct  1 23:02:12 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DisplayDriverALU4_4FP -c DisplayDriverALU4_4FP
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file DisplayDriverALU4_4FP.vhd
@@ -366,14 +365,14 @@ Info (12128): Elaborating entity "BCDto7Segs" for hierarchy "BCDto7Segs:DisplayD
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 161 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 158 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 13 output pins
-    Info (21061): Implemented 130 logic cells
+    Info (21061): Implemented 127 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 519 megabytes
-    Info: Processing ended: Sun Oct  1 22:27:05 2023
+    Info: Peak virtual memory: 530 megabytes
+    Info: Processing ended: Sun Oct  1 23:02:18 2023
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Total CPU time (on all processors): 00:00:19
 
 
