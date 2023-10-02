@@ -34,6 +34,7 @@ architecture rtl of DisplayDriverALU4_4FP is
     signal r_Sel                      : std_logic_vector(1 downto 0) := "00";
     signal r_Show                     : std_logic_vector(3 downto 0) := "0000";
     signal r_Number                   : std_logic_vector(15 downto 0);
+    signal r_Number8                  : std_logic_vector(7 downto 0);
     signal r_Count                    : integer range 0 to 100000;
     --Integer Part Registers
     signal r_Segs1, r_Segs2           : std_logic_vector(6 downto 0);
@@ -141,36 +142,37 @@ begin
                     o_DispPoint <= '1'; --Turn off the point led
             end case;
         end if;
-  
     end process;
-    
-    --Coverting A2 into Sign Magnitude
-    with r_NumberSign select r_Number <=
-            not(i_Number-1) when '1',
-            i_Number        when others;
-
+	 
+	 --Selecting the sign bit
     with i_MultOp select r_NumberSign <=
-    i_Number(15) when '1', --Multiplication
-    i_Number(7) when others;
+        i_Number(15) when '1', --Multiplication
+        i_Number(7)  when others;
+		  
+    --Coverting A2 into Signed Magnitude
+    with r_NumberSign select r_Number  <=
+        not(i_Number-1) when '1',
+        i_Number        when others;
+    with r_NumberSign select r_Number8 <=
+        not(i_Number(11 downto 4)-1) when '1',
+        i_Number(11 downto 4) when others;
 
     --Integer Part
-    with i_MultOp select r_IntPNumber(7 downto 4) <=
-        --No multiplication
-        (others => '0') when '0', --Zeroes
-        --Multiplication
-        r_Number(15 downto 12) when others;
-
-    r_IntPNumber(3 downto 0) <= r_Number(11 downto 8);
+    with i_MultOp select r_IntPNumber(7 downto 4) <= --0000 XXXX . XXXX XXXX
+        (others => '0') when '0',           --No multiplication
+        r_Number(15 downto 12) when others; --Multiplication
+    with i_MultOp select r_IntPNumber(3 downto 0) <= --XXXX 0000 . XXXX XXXX
+        r_Number8(7 downto 4) when '0',     --No multiplication
+        r_Number(11 downto 8) when others;  --Multiplication
 
     --Decimal Part
-    with i_MultOp select r_DecPNumber(3 downto 0) <=
-        --No multiplication
-        (others => '0') when '0', --Zeroes
-        --Multiplication
-        r_Number(3 downto 0) when others;
-    
-    r_DecPNumber(7 downto 4) <= r_Number(7 downto 4);
-    
+    with i_MultOp select r_DecPNumber(7 downto 4) <= --XXXX XXXX . 0000 XXXX
+        r_Number8(3 downto 0) when '0',     --No multiplication
+        r_Number(7 downto 4) when others;   --Multiplication
+    with i_MultOp select r_DecPNumber(3 downto 0) <= --XXXX XXXX . XXXX 0000
+        (others => '0') when '0',           --No multiplication
+        r_Number(3 downto 0) when others;   --Multiplication
+
     o_Displays <= r_Show;
 
     o_NumSign <= not r_NumberSign;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DisplayDriverALU4_4FP
-Sun Oct  1 20:51:24 2023
+Sun Oct  1 22:27:05 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -48,13 +48,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Oct  1 20:51:24 2023          ;
+; Analysis & Synthesis Status        ; Successful - Sun Oct  1 22:27:05 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; DisplayDriverALU4_4FP                          ;
 ; Top-level Entity Name              ; DisplayDriverALU4_4FP                          ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 111                                            ;
-;     Total combinational functions  ; 111                                            ;
+; Total logic elements               ; 130                                            ;
+;     Total combinational functions  ; 130                                            ;
 ;     Dedicated logic registers      ; 19                                             ;
 ; Total registers                    ; 19                                             ;
 ; Total pins                         ; 31                                             ;
@@ -185,17 +185,17 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------+
 ; Resource                                    ; Usage    ;
 +---------------------------------------------+----------+
-; Estimated Total logic elements              ; 111      ;
+; Estimated Total logic elements              ; 130      ;
 ;                                             ;          ;
-; Total combinational functions               ; 111      ;
+; Total combinational functions               ; 130      ;
 ; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 60       ;
-;     -- 3 input functions                    ; 13       ;
-;     -- <=2 input functions                  ; 38       ;
+;     -- 4 input functions                    ; 70       ;
+;     -- 3 input functions                    ; 11       ;
+;     -- <=2 input functions                  ; 49       ;
 ;                                             ;          ;
 ; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 80       ;
-;     -- arithmetic mode                      ; 31       ;
+;     -- normal mode                          ; 92       ;
+;     -- arithmetic mode                      ; 38       ;
 ;                                             ;          ;
 ; Total registers                             ; 19       ;
 ;     -- Dedicated logic registers            ; 19       ;
@@ -206,9 +206,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0        ;
 ;                                             ;          ;
 ; Maximum fan-out node                        ; r_Sel[0] ;
-; Maximum fan-out                             ; 24       ;
-; Total fan-out                               ; 452      ;
-; Average fan-out                             ; 2.35     ;
+; Maximum fan-out                             ; 25       ;
+; Total fan-out                               ; 507      ;
+; Average fan-out                             ; 2.40     ;
 +---------------------------------------------+----------+
 
 
@@ -217,7 +217,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                               ; Entity Name           ; Library Name ;
 +---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------+-----------------------+--------------+
-; |DisplayDriverALU4_4FP          ; 111 (83)            ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 31   ; 0            ; |DisplayDriverALU4_4FP                            ; DisplayDriverALU4_4FP ; work         ;
+; |DisplayDriverALU4_4FP          ; 130 (102)           ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 31   ; 0            ; |DisplayDriverALU4_4FP                            ; DisplayDriverALU4_4FP ; work         ;
 ;    |BCDto7Segs:DisplayDecoder1| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DisplayDriverALU4_4FP|BCDto7Segs:DisplayDecoder1 ; BCDto7Segs            ; work         ;
 ;    |BCDto7Segs:DisplayDecoder2| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DisplayDriverALU4_4FP|BCDto7Segs:DisplayDecoder2 ; BCDto7Segs            ; work         ;
 ;    |BCDto7Segs:DisplayDecoder3| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DisplayDriverALU4_4FP|BCDto7Segs:DisplayDecoder3 ; BCDto7Segs            ; work         ;
@@ -246,6 +246,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |DisplayDriverALU4_4FP|r_DecPNumber[4] ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |DisplayDriverALU4_4FP|r_IntPNumber[6] ;
 ; 21:1               ; 6 bits    ; 84 LEs        ; 18 LEs               ; 66 LEs                 ; No         ; |DisplayDriverALU4_4FP|o_Segments      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
@@ -308,17 +309,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cycloneiii_ff         ; 19                          ;
 ;     SCLR              ; 17                          ;
 ;     plain             ; 2                           ;
-; cycloneiii_lcell_comb ; 114                         ;
-;     arith             ; 31                          ;
-;         2 data inputs ; 31                          ;
-;     normal            ; 83                          ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 13                          ;
-;         4 data inputs ; 60                          ;
+; cycloneiii_lcell_comb ; 133                         ;
+;     arith             ; 38                          ;
+;         2 data inputs ; 38                          ;
+;     normal            ; 95                          ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 11                          ;
+;         4 data inputs ; 70                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.50                        ;
-; Average LUT depth     ; 5.24                        ;
+; Max LUT depth         ; 8.10                        ;
+; Average LUT depth     ; 5.70                        ;
 +-----------------------+-----------------------------+
 
 
@@ -337,7 +338,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Sun Oct  1 20:51:18 2023
+    Info: Processing started: Sun Oct  1 22:26:59 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DisplayDriverALU4_4FP -c DisplayDriverALU4_4FP
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file DisplayDriverALU4_4FP.vhd
@@ -347,32 +348,32 @@ Info (12021): Found 2 design units, including 1 entities, in source file BCDto7S
     Info (12022): Found design unit 1: BCDto7Segs-rtl File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/BCDto7Segs.vhd Line: 16
     Info (12023): Found entity 1: BCDto7Segs File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/BCDto7Segs.vhd Line: 5
 Info (12127): Elaborating entity "DisplayDriverALU4_4FP" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(92): signal "r_SegsConn1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 92
-Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(93): signal "r_SegsConn2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 93
-Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(94): signal "r_SegsConn3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 94
-Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(95): signal "r_SegsConn4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 95
-Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(109): signal "i_MultOp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 109
-Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(110): signal "r_Show" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 110
-Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(113): signal "r_NumberSign" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 113
-Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(119): signal "r_Segs2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 119
-Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(122): signal "r_Segs3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 122
-Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(129): signal "r_Show" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 129
-Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(131): signal "r_Segs1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 131
-Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(134): signal "r_Segs2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 134
-Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(137): signal "r_Segs3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 137
-Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(140): signal "r_Segs4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 140
-Info (12128): Elaborating entity "BCDto7Segs" for hierarchy "BCDto7Segs:DisplayDecoder1" File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 50
+Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(93): signal "r_SegsConn1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 93
+Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(94): signal "r_SegsConn2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 94
+Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(95): signal "r_SegsConn3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 95
+Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(96): signal "r_SegsConn4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 96
+Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(110): signal "i_MultOp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 110
+Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(111): signal "r_Show" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 111
+Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(114): signal "r_NumberSign" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 114
+Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(120): signal "r_Segs2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 120
+Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(123): signal "r_Segs3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 123
+Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(130): signal "r_Show" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 130
+Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(132): signal "r_Segs1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 132
+Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(135): signal "r_Segs2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 135
+Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(138): signal "r_Segs3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 138
+Warning (10492): VHDL Process Statement warning at DisplayDriverALU4_4FP.vhd(141): signal "r_Segs4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 141
+Info (12128): Elaborating entity "BCDto7Segs" for hierarchy "BCDto7Segs:DisplayDecoder1" File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 51
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 142 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 161 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 13 output pins
-    Info (21061): Implemented 111 logic cells
+    Info (21061): Implemented 130 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 527 megabytes
-    Info: Processing ended: Sun Oct  1 20:51:24 2023
+    Info: Peak virtual memory: 519 megabytes
+    Info: Processing ended: Sun Oct  1 22:27:05 2023
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Total CPU time (on all processors): 00:00:20
 
 
