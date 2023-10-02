@@ -55,24 +55,24 @@ begin
     );
 
     DisplayDecoder2 : BCDTo7Segs port map (
-        i_DispPoint        => '0',
-        i_ChipEN           => '1',
-        i_Number           => r_IntPNumber(3 downto 0),
-        o_DisplaySegments   => r_SegsConn2
+        i_DispPoint       => '0',
+        i_ChipEN          => '1',
+        i_Number          => r_IntPNumber(3 downto 0),
+        o_DisplaySegments => r_SegsConn2
     );
     --Decimal part displays
     DisplayDecoder3 : BCDTo7Segs port map (
-        i_DispPoint        => '0',
-        i_ChipEN           => '1',
-        i_Number           => r_DecPNumber(7 downto 4),
-        o_DisplaySegments   => r_SegsConn3
+        i_DispPoint       => '0',
+        i_ChipEN          => '1',
+        i_Number          => r_DecPNumber(7 downto 4),
+        o_DisplaySegments => r_SegsConn3
     );
 
     DisplayDecoder4 : BCDTo7Segs port map (
-        i_DispPoint        => '0',
-        i_ChipEN           => '1',
-        i_Number           => r_DecPNumber(3 downto 0),
-        o_DisplaySegments   => r_SegsConn4
+        i_DispPoint       => '0',
+        i_ChipEN          => '1',
+        i_Number          => r_DecPNumber(3 downto 0),
+        o_DisplaySegments => r_SegsConn4
     );
 
     clkCount : process(i_CLK)
@@ -116,28 +116,28 @@ begin
                         o_Segments <= DISP_POSITIVE_SIGN;
                     end if;
                 when "1011" => --Display 2
-                    o_Segments <= r_Segs2;
+                    o_Segments  <= r_Segs2;
                     o_DispPoint <= '0'; --Turn on the point led 
                 when "1101" => --Display 3
-                    o_Segments <= r_Segs3;
+                    o_Segments  <= r_Segs3;
                     o_DispPoint <= '1'; --Turn off the point led
                 when others => --Display 4
-                    o_Segments <= "1111111";
+                    o_Segments  <= "1111111";
                     o_DispPoint <= '1'; --Turn off the point led
             end case;
         else -- Is a Multiplication
             case r_Show is
                 when "0111" => --Display 1
-                    o_Segments <= r_Segs1;
+                    o_Segments  <= r_Segs1;
                     o_DispPoint <= '1'; --Turn off the point led
                 when "1011" => --Display 2
-                    o_Segments <= r_Segs2;
+                    o_Segments  <= r_Segs2;
                     o_DispPoint <= '0'; --Turn on the point led 
                 when "1101" => --Display 3
-                    o_Segments <= r_Segs3;
+                    o_Segments  <= r_Segs3;
                     o_DispPoint <= '1'; --Turn off the point led
                 when others => --Display 4
-                    o_Segments <= r_Segs4;
+                    o_Segments  <= r_Segs4;
                     o_DispPoint <= '1'; --Turn off the point led
             end case;
         end if;
@@ -146,9 +146,12 @@ begin
     
     --Coverting A2 into Sign Magnitude
     with r_NumberSign select r_Number <=
-            --Chck here algorithm error
             not(i_Number-1) when '1',
             i_Number        when others;
+
+    with i_MultOp select r_NumberSign <=
+    i_Number(15) when '1', --Multiplication
+    i_Number(7) when others;
 
     --Integer Part
     with i_MultOp select r_IntPNumber(7 downto 4) <=
@@ -162,18 +165,14 @@ begin
     --Decimal Part
     with i_MultOp select r_DecPNumber(3 downto 0) <=
         --No multiplication
-        r_Number(3 downto 0) when '0', --Zeroes
+        (others => '0') when '0', --Zeroes
         --Multiplication
-        (others => '0') when others;
+        r_Number(3 downto 0) when others;
     
     r_DecPNumber(7 downto 4) <= r_Number(7 downto 4);
     
-    with i_MultOp select r_NumberSign <=
-        i_Number(15) when '0',
-        i_Number(7) when others;
-    
     o_Displays <= r_Show;
 
-    o_NumSign <= r_NumberSign;
+    o_NumSign <= not r_NumberSign;
 
 end architecture rtl;

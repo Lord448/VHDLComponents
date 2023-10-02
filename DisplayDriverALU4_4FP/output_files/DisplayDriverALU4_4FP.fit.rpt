@@ -1,5 +1,5 @@
 Fitter report for DisplayDriverALU4_4FP
-Sun Oct  1 14:36:03 2023
+Sun Oct  1 20:51:27 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -66,7 +66,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Sun Oct  1 14:36:03 2023          ;
+; Fitter Status                      ; Successful - Sun Oct  1 20:51:27 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; DisplayDriverALU4_4FP                          ;
 ; Top-level Entity Name              ; DisplayDriverALU4_4FP                          ;
@@ -154,12 +154,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.08        ;
+; Average used               ; 1.10        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.6%      ;
+;     Processor 2            ;   0.7%      ;
 ;     Processors 3-16        ;   0.6%      ;
 +----------------------------+-------------+
 
@@ -216,8 +216,8 @@ The pin-out file can be found in /home/lord448/altera/VHDLComponents/DisplayDriv
 ;     -- Combinational with a register        ; 17                   ;
 ;                                             ;                      ;
 ; Logic element usage by number of LUT inputs ;                      ;
-;     -- 4 input functions                    ; 61                   ;
-;     -- 3 input functions                    ; 12                   ;
+;     -- 4 input functions                    ; 60                   ;
+;     -- 3 input functions                    ; 13                   ;
 ;     -- <=2 input functions                  ; 38                   ;
 ;     -- Register only                        ; 2                    ;
 ;                                             ;                      ;
@@ -247,12 +247,12 @@ The pin-out file can be found in /home/lord448/altera/VHDLComponents/DisplayDriv
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )        ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )        ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )        ;
-; Average interconnect usage (total/H/V)      ; 0.5% / 0.4% / 0.6%   ;
-; Peak interconnect usage (total/H/V)         ; 1.0% / 1.0% / 1.2%   ;
+; Average interconnect usage (total/H/V)      ; 0.5% / 0.4% / 0.5%   ;
+; Peak interconnect usage (total/H/V)         ; 1.0% / 1.0% / 1.3%   ;
 ; Maximum fan-out                             ; 24                   ;
 ; Highest non-global fan-out                  ; 24                   ;
-; Total fan-out                               ; 461                  ;
-; Average fan-out                             ; 2.25                 ;
+; Total fan-out                               ; 460                  ;
+; Average fan-out                             ; 2.24                 ;
 +---------------------------------------------+----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -271,8 +271,8 @@ The pin-out file can be found in /home/lord448/altera/VHDLComponents/DisplayDriv
 ;     -- Combinational with a register        ; 17                  ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic element usage by number of LUT inputs ;                     ;                                ;
-;     -- 4 input functions                    ; 61                  ; 0                              ;
-;     -- 3 input functions                    ; 12                  ; 0                              ;
+;     -- 4 input functions                    ; 60                  ; 0                              ;
+;     -- 3 input functions                    ; 13                  ; 0                              ;
 ;     -- <=2 input functions                  ; 38                  ; 0                              ;
 ;     -- Register only                        ; 2                   ; 0                              ;
 ;                                             ;                     ;                                ;
@@ -300,7 +300,7 @@ The pin-out file can be found in /home/lord448/altera/VHDLComponents/DisplayDriv
 ;     -- Registered Output Connections        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Internal Connections                        ;                     ;                                ;
-;     -- Total Connections                    ; 456                 ; 5                              ;
+;     -- Total Connections                    ; 455                 ; 5                              ;
 ;     -- Registered Connections               ; 76                  ; 0                              ;
 ;                                             ;                     ;                                ;
 ; External Connections                        ;                     ;                                ;
@@ -341,14 +341,14 @@ The pin-out file can be found in /home/lord448/altera/VHDLComponents/DisplayDriv
 ; i_Number[12] ; 49    ; 3        ; 13           ; 0            ; 14           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; no        ;
 ; i_Number[13] ; 50    ; 3        ; 13           ; 0            ; 0            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; no        ;
 ; i_Number[14] ; 51    ; 3        ; 16           ; 0            ; 21           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; no        ;
-; i_Number[15] ; 52    ; 3        ; 16           ; 0            ; 7            ; 9                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; no        ;
+; i_Number[15] ; 52    ; 3        ; 16           ; 0            ; 7            ; 11                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; no        ;
 ; i_Number[1]  ; 73    ; 5        ; 34           ; 2            ; 21           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; no        ;
 ; i_Number[2]  ; 74    ; 5        ; 34           ; 2            ; 14           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; no        ;
 ; i_Number[3]  ; 75    ; 5        ; 34           ; 3            ; 21           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; no        ;
 ; i_Number[4]  ; 76    ; 5        ; 34           ; 4            ; 21           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; no        ;
 ; i_Number[5]  ; 77    ; 5        ; 34           ; 4            ; 14           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; no        ;
 ; i_Number[6]  ; 80    ; 5        ; 34           ; 7            ; 7            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; no        ;
-; i_Number[7]  ; 83    ; 5        ; 34           ; 9            ; 21           ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; no        ;
+; i_Number[7]  ; 83    ; 5        ; 34           ; 9            ; 21           ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; no        ;
 ; i_Number[8]  ; 42    ; 3        ; 3            ; 0            ; 0            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; no        ;
 ; i_Number[9]  ; 43    ; 3        ; 5            ; 0            ; 21           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; no        ;
 +--------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
@@ -626,21 +626,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; o_DispPoint   ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; o_NumSign     ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; i_Number[4]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; i_Number[7]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; i_Number[15]  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; i_Number[7]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; i_MultOp      ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; i_Number[3]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; i_Number[2]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; i_Number[1]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; i_Number[1]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; i_Number[0]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; i_Number[5]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; i_Number[6]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; i_Number[8]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; i_Number[9]   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; i_Number[6]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; i_Number[8]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; i_Number[9]   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; i_Number[10]  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; i_Number[11]  ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; i_Number[12]  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; i_Number[13]  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; i_Number[13]  ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; i_Number[14]  ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; i_CLK         ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 +---------------+----------+---------------+---------------+-----------------------+-----+------+
@@ -654,14 +654,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; i_Number[4]              ;                   ;         ;
 ;      - Add2~8            ; 0                 ; 6       ;
 ;      - r_DecPNumber[4]~2 ; 0                 ; 6       ;
-; i_Number[7]              ;                   ;         ;
-;      - Add2~14           ; 0                 ; 6       ;
-;      - r_NumberSign~0    ; 0                 ; 6       ;
-;      - r_IntPNumber[4]~4 ; 0                 ; 6       ;
-;      - r_IntPNumber[5]~5 ; 0                 ; 6       ;
-;      - r_IntPNumber[6]~6 ; 0                 ; 6       ;
-;      - r_IntPNumber[7]~7 ; 0                 ; 6       ;
-;      - r_DecPNumber[7]~9 ; 0                 ; 6       ;
 ; i_Number[15]             ;                   ;         ;
 ;      - Add2~30           ; 0                 ; 6       ;
 ;      - r_NumberSign~0    ; 0                 ; 6       ;
@@ -669,7 +661,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - r_DecPNumber[1]~6 ; 0                 ; 6       ;
 ;      - r_DecPNumber[2]~7 ; 0                 ; 6       ;
 ;      - r_DecPNumber[3]~8 ; 0                 ; 6       ;
+;      - r_IntPNumber[4]~4 ; 0                 ; 6       ;
+;      - r_IntPNumber[5]~5 ; 0                 ; 6       ;
+;      - r_IntPNumber[6]~6 ; 0                 ; 6       ;
 ;      - r_IntPNumber[7]~7 ; 0                 ; 6       ;
+;      - r_DecPNumber[7]~9 ; 0                 ; 6       ;
+; i_Number[7]              ;                   ;         ;
+;      - Add2~14           ; 0                 ; 6       ;
+;      - r_NumberSign~0    ; 0                 ; 6       ;
 ;      - r_DecPNumber[7]~9 ; 0                 ; 6       ;
 ;      - Mux4~7            ; 0                 ; 6       ;
 ; i_MultOp                 ;                   ;         ;
@@ -680,8 +679,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Add2~4            ; 0                 ; 6       ;
 ;      - r_DecPNumber[2]~7 ; 0                 ; 6       ;
 ; i_Number[1]              ;                   ;         ;
-;      - Add2~2            ; 0                 ; 6       ;
-;      - r_DecPNumber[1]~6 ; 0                 ; 6       ;
+;      - Add2~2            ; 1                 ; 6       ;
+;      - r_DecPNumber[1]~6 ; 1                 ; 6       ;
 ; i_Number[0]              ;                   ;         ;
 ;      - Add2~0            ; 0                 ; 6       ;
 ;      - r_DecPNumber[0]~5 ; 0                 ; 6       ;
@@ -689,14 +688,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Add2~10           ; 0                 ; 6       ;
 ;      - r_DecPNumber[5]~3 ; 0                 ; 6       ;
 ; i_Number[6]              ;                   ;         ;
-;      - Add2~12           ; 1                 ; 6       ;
-;      - r_DecPNumber[6]~4 ; 1                 ; 6       ;
+;      - Add2~12           ; 0                 ; 6       ;
+;      - r_DecPNumber[6]~4 ; 0                 ; 6       ;
 ; i_Number[8]              ;                   ;         ;
-;      - Add2~16           ; 1                 ; 6       ;
-;      - r_IntPNumber[0]~0 ; 1                 ; 6       ;
+;      - Add2~16           ; 0                 ; 6       ;
+;      - r_IntPNumber[0]~0 ; 0                 ; 6       ;
 ; i_Number[9]              ;                   ;         ;
-;      - Add2~18           ; 1                 ; 6       ;
-;      - r_IntPNumber[1]~1 ; 1                 ; 6       ;
+;      - Add2~18           ; 0                 ; 6       ;
+;      - r_IntPNumber[1]~1 ; 0                 ; 6       ;
 ; i_Number[10]             ;                   ;         ;
 ;      - Add2~20           ; 0                 ; 6       ;
 ;      - r_IntPNumber[2]~2 ; 0                 ; 6       ;
@@ -707,8 +706,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Add2~24           ; 0                 ; 6       ;
 ;      - r_IntPNumber[4]~4 ; 0                 ; 6       ;
 ; i_Number[13]             ;                   ;         ;
-;      - Add2~26           ; 0                 ; 6       ;
-;      - r_IntPNumber[5]~5 ; 0                 ; 6       ;
+;      - Add2~26           ; 1                 ; 6       ;
+;      - r_IntPNumber[5]~5 ; 1                 ; 6       ;
 ; i_Number[14]             ;                   ;         ;
 ;      - Add2~28           ; 1                 ; 6       ;
 ;      - r_IntPNumber[6]~6 ; 1                 ; 6       ;
@@ -721,7 +720,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------+-------------------+---------+-------------+--------+----------------------+------------------+---------------------------+
 ; Name        ; Location          ; Fan-Out ; Usage       ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------------+-------------------+---------+-------------+--------+----------------------+------------------+---------------------------+
-; LessThan0~3 ; LCCOMB_X22_Y16_N4 ; 18      ; Sync. clear ; no     ; --                   ; --               ; --                        ;
+; LessThan0~3 ; LCCOMB_X19_Y11_N8 ; 18      ; Sync. clear ; no     ; --                   ; --               ; --                        ;
 ; i_CLK       ; PIN_23            ; 19      ; Clock       ; yes    ; Global Clock         ; GCLK2            ; --                        ;
 +-------------+-------------------+---------+-------------+--------+----------------------+------------------+---------------------------+
 
@@ -731,7 +730,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name  ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; i_CLK ; PIN_23   ; 19      ; 0                                    ; Global Clock         ; GCLK2            ; --                        ;
+; i_CLK ; PIN_23   ; 19      ; 5                                    ; Global Clock         ; GCLK2            ; --                        ;
 +-------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -740,13 +739,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+------------------------+
 ; Routing Resource Type ; Usage                  ;
 +-----------------------+------------------------+
-; Block interconnects   ; 122 / 32,401 ( < 1 % ) ;
-; C16 interconnects     ; 17 / 1,326 ( 1 % )     ;
-; C4 interconnects      ; 85 / 21,816 ( < 1 % )  ;
-; Direct links          ; 22 / 32,401 ( < 1 % )  ;
+; Block interconnects   ; 128 / 32,401 ( < 1 % ) ;
+; C16 interconnects     ; 16 / 1,326 ( 1 % )     ;
+; C4 interconnects      ; 81 / 21,816 ( < 1 % )  ;
+; Direct links          ; 26 / 32,401 ( < 1 % )  ;
 ; Global clocks         ; 1 / 10 ( 10 % )        ;
-; Local interconnects   ; 52 / 10,320 ( < 1 % )  ;
-; R24 interconnects     ; 18 / 1,289 ( 1 % )     ;
+; Local interconnects   ; 51 / 10,320 ( < 1 % )  ;
+; R24 interconnects     ; 20 / 1,289 ( 2 % )     ;
 ; R4 interconnects      ; 44 / 28,186 ( < 1 % )  ;
 +-----------------------+------------------------+
 
@@ -824,7 +823,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 7.67) ; Number of LABs  (Total = 9) ;
+; Number of Signals Sourced Out  (Average = 7.78) ; Number of LABs  (Total = 9) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
 ; 1                                               ; 0                           ;
@@ -833,8 +832,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 4                                               ; 0                           ;
 ; 5                                               ; 2                           ;
 ; 6                                               ; 2                           ;
-; 7                                               ; 1                           ;
-; 8                                               ; 0                           ;
+; 7                                               ; 0                           ;
+; 8                                               ; 1                           ;
 ; 9                                               ; 0                           ;
 ; 10                                              ; 1                           ;
 ; 11                                              ; 0                           ;
@@ -849,15 +848,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 11.78) ; Number of LABs  (Total = 9) ;
+; Number of Distinct Inputs  (Average = 11.89) ; Number of LABs  (Total = 9) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
 ; 1                                            ; 0                           ;
 ; 2                                            ; 0                           ;
 ; 3                                            ; 0                           ;
 ; 4                                            ; 0                           ;
-; 5                                            ; 2                           ;
-; 6                                            ; 1                           ;
+; 5                                            ; 3                           ;
+; 6                                            ; 0                           ;
 ; 7                                            ; 1                           ;
 ; 8                                            ; 0                           ;
 ; 9                                            ; 0                           ;
@@ -867,9 +866,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 13                                           ; 0                           ;
 ; 14                                           ; 0                           ;
 ; 15                                           ; 1                           ;
-; 16                                           ; 2                           ;
+; 16                                           ; 1                           ;
 ; 17                                           ; 1                           ;
-; 18                                           ; 0                           ;
+; 18                                           ; 1                           ;
 ; 19                                           ; 1                           ;
 +----------------------------------------------+-----------------------------+
 
@@ -949,8 +948,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; o_DispPoint        ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; o_NumSign          ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; i_Number[4]        ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; i_Number[7]        ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; i_Number[15]       ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; i_Number[7]        ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; i_MultOp           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; i_Number[3]        ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; i_Number[2]        ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
@@ -1035,7 +1034,7 @@ Info (176353): Automatically promoted node i_CLK~input (placed in PIN 23 (CLK1, 
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1044,7 +1043,7 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X11_Y0 to location X22_Y11
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X11_Y0 to location X22_Y11
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
@@ -1056,8 +1055,8 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169177): 17 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
     Info (169178): Pin i_Number[4] uses I/O standard 3.3-V LVCMOS at 76 File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 10
-    Info (169178): Pin i_Number[7] uses I/O standard 3.3-V LVCMOS at 83 File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 10
     Info (169178): Pin i_Number[15] uses I/O standard 3.3-V LVCMOS at 52 File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 10
+    Info (169178): Pin i_Number[7] uses I/O standard 3.3-V LVCMOS at 83 File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 10
     Info (169178): Pin i_MultOp uses I/O standard 3.3-V LVCMOS at 88 File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 9
     Info (169178): Pin i_Number[3] uses I/O standard 3.3-V LVCMOS at 75 File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 10
     Info (169178): Pin i_Number[2] uses I/O standard 3.3-V LVCMOS at 74 File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 10
@@ -1074,8 +1073,8 @@ Warning (169177): 17 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 
     Info (169178): Pin i_Number[14] uses I/O standard 3.3-V LVCMOS at 51 File: /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/DisplayDriverALU4_4FP.vhd Line: 10
 Info (144001): Generated suppressed messages file /home/lord448/altera/VHDLComponents/DisplayDriverALU4_4FP/output_files/DisplayDriverALU4_4FP.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 1958 megabytes
-    Info: Processing ended: Sun Oct  1 14:36:03 2023
+    Info: Peak virtual memory: 1954 megabytes
+    Info: Processing ended: Sun Oct  1 20:51:27 2023
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:04
 
