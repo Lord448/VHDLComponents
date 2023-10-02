@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Mon Oct  2 00:27:58 2023
+Analysis & Synthesis Status : Successful - Mon Oct  2 00:42:40 2023
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : DisplayDriverALU4_4FP
 Top-level Entity Name : DisplayDriverALU4_4FP
 Family : Cyclone IV E
-Total logic elements : 128
-    Total combinational functions : 128
+Total logic elements : 104
+    Total combinational functions : 104
     Dedicated logic registers : 19
 Total registers : 19
 Total pins : 32

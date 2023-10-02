@@ -44,7 +44,6 @@ architecture rtl of DisplayDriverALU4_4FP is
     signal r_SegsConn3, r_SegsConn4   : std_logic_vector(6 downto 0);
     --Signed Logic Registers
     signal r_NumberSign               : std_logic;
-    signal r_MultOp                   : std_logic;
     signal r_IntPNumber, r_DecPNumber : std_logic_vector(7 downto 0);
     
 begin
@@ -95,6 +94,7 @@ begin
         r_Segs2 <= r_SegsConn2;
         r_Segs3 <= r_SegsConn3;
         r_Segs4 <= r_SegsConn4;
+
         case r_Sel is
             when "00" => 
                 r_Show <= "1110";
@@ -108,41 +108,20 @@ begin
                 r_Show <= "1111";
         end case;
         
-        if r_MultOp = '0' then --Not a multiplication
-            case r_Show is
-                when "0111" => --Display 1
-                    o_DispPoint <= '1'; --Turn off the point led
-                    if r_NumberSign = '1' then 
-                        o_Segments <= DISP_NEGATIVE_SIGN;
-                    else
-                        o_Segments <= DISP_POSITIVE_SIGN;
-                    end if;
-                when "1011" => --Display 2
-                    o_Segments  <= r_Segs2;
-                    o_DispPoint <= '0'; --Turn on the point led 
-                when "1101" => --Display 3
-                    o_Segments  <= r_Segs3;
-                    o_DispPoint <= '1'; --Turn off the point led
-                when others => --Display 4
-                    o_Segments  <= "1111111";
-                    o_DispPoint <= '1'; --Turn off the point led
-            end case;
-        else -- Is a Multiplication
-            case r_Show is
-                when "0111" => --Display 1
-                    o_Segments  <= r_Segs1;
-                    o_DispPoint <= '1'; --Turn off the point led
-                when "1011" => --Display 2
-                    o_Segments  <= r_Segs2;
-                    o_DispPoint <= '0'; --Turn on the point led 
-                when "1101" => --Display 3
-                    o_Segments  <= r_Segs3;
-                    o_DispPoint <= '1'; --Turn off the point led
-                when others => --Display 4
-                    o_Segments  <= r_Segs4;
-                    o_DispPoint <= '1'; --Turn off the point led
-            end case;
-        end if;
+        case r_Show is
+            when "0111" => --Display 1
+                o_Segments  <= r_Segs1;
+                o_DispPoint <= '1'; --Turn off the point led
+            when "1011" => --Display 2
+                o_Segments  <= r_Segs2;
+                o_DispPoint <= '0'; --Turn on the point led 
+            when "1101" => --Display 3
+                o_Segments  <= r_Segs3;
+                o_DispPoint <= '1'; --Turn off the point led
+            when others => --Display 4
+                o_Segments  <= r_Segs4;
+                o_DispPoint <= '1'; --Turn off the point led
+        end case;
     end process;
 	 
 	 --Selecting the sign bit
@@ -160,24 +139,11 @@ begin
         i_Number(7 downto 0) when others;
 
     --Integer Part
-    with r_MultOp select r_IntPNumber(7 downto 4) <= --0000 XXXX . XXXX XXXX
-        (others => '0') when '0',           --No multiplication
-        r_Number(15 downto 12) when others; --Multiplication
-    with r_MultOp select r_IntPNumber(3 downto 0) <= --XXXX 0000 . XXXX XXXX
-        r_Number8(7 downto 4) when '0',     --No multiplication
-        r_Number(11 downto 8) when others;  --Multiplication
-
+    r_IntPNumber <= r_Number(15 downto 8);
     --Decimal Part
-    with r_MultOp select r_DecPNumber(7 downto 4) <= --XXXX XXXX . 0000 XXXX
-        r_Number8(3 downto 0) when '0',     --No multiplication
-        r_Number(7 downto 4) when others;   --Multiplication
-    with r_MultOp select r_DecPNumber(3 downto 0) <= --XXXX XXXX . XXXX 0000
-        (others => '0') when '0',           --No multiplication
-        r_Number(3 downto 0) when others;   --Multiplication
+    r_DecPNumber <= r_Number(7 downto 0);
 
     o_Displays <= r_Show;
-
-    r_MultOp <= i_OpSel(1);
 
     o_NumSign <= not r_NumberSign;
 
