@@ -1,5 +1,5 @@
 Assembler report for DisplayDriverALU4_4FP
-Sun Oct  1 23:02:23 2023
+Mon Oct  2 00:28:03 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Oct  1 23:02:23 2023 ;
+; Assembler Status      ; Successful - Mon Oct  2 00:28:03 2023 ;
 ; Revision Name         ; DisplayDriverALU4_4FP                 ;
 ; Top-level Entity Name ; DisplayDriverALU4_4FP                 ;
 ; Family                ; Cyclone IV E                          ;
@@ -67,8 +67,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+------------------------------------+
 ; Option         ; Setting                            ;
 +----------------+------------------------------------+
-; JTAG usercode  ; 0x000A6346                         ;
-; Checksum       ; 0x000A6346                         ;
+; JTAG usercode  ; 0x000A4F9C                         ;
+; Checksum       ; 0x000A4F9C                         ;
 +----------------+------------------------------------+
 
 
@@ -78,14 +78,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Sun Oct  1 23:02:22 2023
+    Info: Processing started: Mon Oct  2 00:28:03 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off DisplayDriverALU4_4FP -c DisplayDriverALU4_4FP
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 353 megabytes
-    Info: Processing ended: Sun Oct  1 23:02:23 2023
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Mon Oct  2 00:28:03 2023
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
 

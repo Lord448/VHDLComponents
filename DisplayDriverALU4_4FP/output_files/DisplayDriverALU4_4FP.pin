@@ -156,8 +156,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : 84        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : 85        :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 86        :        :                   :         : 5         :                
 o_NumSign                    : 87        : output : 3.3-V LVCMOS      :         : 5         : Y              
-i_MultOp                     : 88        : input  : 3.3-V LVCMOS      :         : 5         : Y              
-GND+                         : 89        :        :                   :         : 5         :                
+i_OpSel[1]                   : 88        : input  : 2.5 V             :         : 5         : Y              
+i_OpSel[0]                   : 89        : input  : 2.5 V             :         : 5         : Y              
 GND+                         : 90        :        :                   :         : 6         :                
 GND+                         : 91        :        :                   :         : 6         :                
 CONF_DONE                    : 92        :        :                   :         : 6         :                
