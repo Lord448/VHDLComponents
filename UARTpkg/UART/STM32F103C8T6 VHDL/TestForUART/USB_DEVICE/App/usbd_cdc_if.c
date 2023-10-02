@@ -49,7 +49,8 @@
   */
 
 /* USER CODE BEGIN PRIVATE_TYPES */
-
+extern char ResBuffer[64];
+extern uint8_t ReceiveFlag;
 /* USER CODE END PRIVATE_TYPES */
 
 /**
@@ -261,6 +262,12 @@ static int8_t CDC_Receive_FS(uint8_t* Buf, uint32_t *Len)
   /* USER CODE BEGIN 6 */
   USBD_CDC_SetRxBuffer(&hUsbDeviceFS, &Buf[0]);
   USBD_CDC_ReceivePacket(&hUsbDeviceFS);
+  memset(ResBuffer, '\0', 64); //Clear the buffer
+  uint8_t len = (uint8_t)*Len;
+  memcpy(ResBuffer, Buf, len); //Copy the data to buffer
+  memset(Buf, '\0', len); //Clear Buf
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 1);
+  ReceiveFlag = 1;
   return (USBD_OK);
   /* USER CODE END 6 */
 }
@@ -291,7 +298,18 @@ uint8_t CDC_Transmit_FS(uint8_t* Buf, uint16_t Len)
 }
 
 /* USER CODE BEGIN PRIVATE_FUNCTIONS_IMPLEMENTATION */
-
+uint8_t CDC_getReady(void)
+{
+	USBD_CDC_HandleTypeDef *hcdc = (USBD_CDC_HandleTypeDef *) hUsbDeviceFS.pClassData;
+	if(hcdc -> TxState != 0)
+	{
+		return USBD_BUSY;
+	}
+	else
+	{
+		return USBD_OK;
+	}
+}
 /* USER CODE END PRIVATE_FUNCTIONS_IMPLEMENTATION */
 
 /**

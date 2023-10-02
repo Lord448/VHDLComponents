@@ -52,11 +52,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "o_NumSign",
+					"strict" : false
+				},
+				{
 					"name" : "i_Number[4]",
 					"strict" : false
 				},
 				{
 					"name" : "i_Number[7]",
+					"strict" : false
+				},
+				{
+					"name" : "i_Number[15]",
+					"strict" : false
+				},
+				{
+					"name" : "i_MultOp",
 					"strict" : false
 				},
 				{
@@ -81,6 +93,34 @@
 				},
 				{
 					"name" : "i_Number[6]",
+					"strict" : false
+				},
+				{
+					"name" : "i_Number[8]",
+					"strict" : false
+				},
+				{
+					"name" : "i_Number[9]",
+					"strict" : false
+				},
+				{
+					"name" : "i_Number[10]",
+					"strict" : false
+				},
+				{
+					"name" : "i_Number[11]",
+					"strict" : false
+				},
+				{
+					"name" : "i_Number[12]",
+					"strict" : false
+				},
+				{
+					"name" : "i_Number[13]",
+					"strict" : false
+				},
+				{
+					"name" : "i_Number[14]",
 					"strict" : false
 				},
 				{

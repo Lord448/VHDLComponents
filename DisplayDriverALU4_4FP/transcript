@@ -12,9 +12,9 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# vsim -t 1fs work.tb_DisplayDriverALU4_4FP 
-# Start time: 18:53:19 on Sep 25,2023
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# vsim -t 1ps work.tb_DisplayDriverALU4_4FP 
+# Start time: 20:39:35 on Sep 29,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -22,22 +22,14 @@
 # Loading ieee.std_logic_unsigned(body)
 # Loading ieee.numeric_std(body)
 # Loading work.tb_displaydriveralu4_4fp(rtl)#1
-add wave -position end  sim:/tb_displaydriveralu4_4fp/i_CLK
+# ** Warning: (vsim-3479) Time unit 'fs' is less than the simulator resolution (1ps).
+#    Time: 0 ps  Iteration: 0  Root: /
+add wave -position end  sim:/tb_displaydriveralu4_4fp/i_MultOp
+add wave -position end  sim:/tb_displaydriveralu4_4fp/o_NumSign
 add wave -position end  sim:/tb_displaydriveralu4_4fp/i_Number
 add wave -position end  sim:/tb_displaydriveralu4_4fp/o_Displays
 add wave -position end  sim:/tb_displaydriveralu4_4fp/o_Segments
 run
-restart
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-run
-#############  Autofindloop Analysis  ###############
-#############  Loop found at time 2760 fs ###############
-#       Signal: /tb_displaydriveralu4_4fp/U1/r_Segs2 @ sub-iteration 0 at Value unknown (DisplayDriverALU4_4FP.vhd:34)
-#       Signal: /tb_displaydriveralu4_4fp/U1/r_Segs1 @ sub-iteration 0 at Value unknown (DisplayDriverALU4_4FP.vhd:34)
-#   Active process: /tb_displaydriveralu4_4fp/U1/ShowDisplays @ sub-iteration 1
-#     Source: tb_DisplayDriverALU4_4FP.vhd:41
-#       Signal: /tb_displaydriveralu4_4fp/U1/r_Segs2 @ sub-iteration 2 at Value unknown (DisplayDriverALU4_4FP.vhd:34)
-################# END OF LOOP #################
-# ** Error (suppressible): (vsim-3601) Iteration limit 10000000 reached at time 2760 fs.
-# End time: 18:55:13 on Sep 25,2023, Elapsed time: 0:01:54
-# Errors: 1, Warnings: 0
+# Causality operation skipped due to absence of debug database file
+# ** Fatal: (SIGSEGV) Bad handle or reference.
+#    Time: 0 ps  Iteration: 0  Process: /tb_displaydriveralu4_4fp/stim_proc File: tb_DisplayDriverALU4_4FP.vhd
