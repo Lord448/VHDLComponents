@@ -12,8 +12,8 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# vsim -t 1ps work.tb_DisplayDriverALU4_4FP 
-# Start time: 20:39:35 on Sep 29,2023
+# vsim -t 1ns work.tb_DisplayDriverALU4_4FP 
+# Start time: 11:36:03 on Oct 02,2023
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # Loading std.standard
 # Loading std.textio(body)
@@ -22,14 +22,13 @@
 # Loading ieee.std_logic_unsigned(body)
 # Loading ieee.numeric_std(body)
 # Loading work.tb_displaydriveralu4_4fp(rtl)#1
-# ** Warning: (vsim-3479) Time unit 'fs' is less than the simulator resolution (1ps).
-#    Time: 0 ps  Iteration: 0  Root: /
-add wave -position end  sim:/tb_displaydriveralu4_4fp/i_MultOp
-add wave -position end  sim:/tb_displaydriveralu4_4fp/o_NumSign
-add wave -position end  sim:/tb_displaydriveralu4_4fp/i_Number
-add wave -position end  sim:/tb_displaydriveralu4_4fp/o_Displays
-add wave -position end  sim:/tb_displaydriveralu4_4fp/o_Segments
-run
-# Causality operation skipped due to absence of debug database file
-# ** Fatal: (SIGSEGV) Bad handle or reference.
-#    Time: 0 ps  Iteration: 0  Process: /tb_displaydriveralu4_4fp/stim_proc File: tb_DisplayDriverALU4_4FP.vhd
+# ** Warning: (vsim-3473) Component instance "DisplayDecoder1 : BCDTo7Segs" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_displaydriveralu4_4fp/U1 File: DisplayDriverALU4_4FP.vhd
+# ** Warning: (vsim-3473) Component instance "DisplayDecoder2 : BCDTo7Segs" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_displaydriveralu4_4fp/U1 File: DisplayDriverALU4_4FP.vhd
+# ** Warning: (vsim-3473) Component instance "DisplayDecoder3 : BCDTo7Segs" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_displaydriveralu4_4fp/U1 File: DisplayDriverALU4_4FP.vhd
+# ** Warning: (vsim-3473) Component instance "DisplayDecoder4 : BCDTo7Segs" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_displaydriveralu4_4fp/U1 File: DisplayDriverALU4_4FP.vhd
+# End time: 11:36:36 on Oct 02,2023, Elapsed time: 0:00:33
+# Errors: 0, Warnings: 4

@@ -45,6 +45,9 @@ architecture rtl of DisplayDriverALU4_4FP is
     --Signed Logic Registers
     signal r_NumberSign               : std_logic;
     signal r_IntPNumber, r_DecPNumber : std_logic_vector(7 downto 0);
+    --Simulation conection registers (Not using)
+    signal r_DE1, r_DE2, r_DE3, r_DE4 : std_logic;
+    signal r_DP1, r_DP2, r_DP3, r_DP4 : std_logic; 
     
 begin
     --Integer part displays
@@ -52,28 +55,36 @@ begin
         i_DispPoint       => '1',
         i_ChipEN          => '1',
         i_Number          => r_IntPNumber(7 downto 4),
-        o_DisplaySegments => r_SegsConn1
+        o_DisplaySegments => r_SegsConn1,
+        o_DispEnable      => r_DE1,
+        o_DispPoint       => r_DP1
     );
 
     DisplayDecoder2 : BCDTo7Segs port map (
         i_DispPoint       => '0',
         i_ChipEN          => '1',
         i_Number          => r_IntPNumber(3 downto 0),
-        o_DisplaySegments => r_SegsConn2
+        o_DisplaySegments => r_SegsConn2,
+        o_DispEnable      => r_DE2,
+        o_DispPoint       => r_DP2
     );
     --Decimal part displays
     DisplayDecoder3 : BCDTo7Segs port map (
         i_DispPoint       => '0',
         i_ChipEN          => '1',
         i_Number          => r_DecPNumber(7 downto 4),
-        o_DisplaySegments => r_SegsConn3
+        o_DisplaySegments => r_SegsConn3,
+        o_DispEnable      => r_DE3,
+        o_DispPoint       => r_DP3
     );
 
     DisplayDecoder4 : BCDTo7Segs port map (
         i_DispPoint       => '0',
         i_ChipEN          => '1',
         i_Number          => r_DecPNumber(3 downto 0),
-        o_DisplaySegments => r_SegsConn4
+        o_DisplaySegments => r_SegsConn4,
+        o_DispEnable      => r_DE4,
+        o_DispPoint       => r_DP4
     );
 
     clkCount : process(i_CLK)
@@ -127,8 +138,8 @@ begin
 	 --Selecting the sign bit
     with i_OpSel select r_NumberSign <=
         '0' when "00",
-        i_Number(7) when "01",
-        i_Number(15)  when others; --Multiplication
+        i_Number(11) when "01",
+        i_Number(15) when others; --Multiplication
 		  
     --Coverting A2 into Signed Magnitude
     with r_NumberSign select r_Number  <=
