@@ -4,14 +4,14 @@ use IEEE.numeric_std.all;
 
 entity UART_TX is
     generic (
-        g_CLKS_PER_BIT   : integer := 434 --For 115200Bauds @ 50Mhz
+        g_CLKS_PER_BIT   : integer := 434 --For 115200 Baudios @ 50MHz
         --g_NUMBER_OF_BITS : integer := 8
     );
     port (
-        i_CLK        : in std_logic;
-        i_TX_Start   : in std_logic;
-        i_TX_Data    : in std_logic_vector(7 downto 0);
-        i_Parity_Sel : in std_logic_vector(1 downto 0);
+        i_TX_Data    : in  std_logic_vector(7 downto 0);
+        i_Parity_Sel : in  std_logic_vector(1 downto 0);
+        i_CLK        : in  std_logic;
+        i_TX_Start   : in  std_logic;
         o_Busy       : out std_logic;  --1 When the peripherial is sending data, 0 when is ready to send
         o_TX_Done    : out std_logic;
         o_TX_Serial  : out std_logic
