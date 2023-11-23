@@ -13,7 +13,7 @@
 # //  18 U.S.C. Section 1905.
 # //
 # vsim -t 1ps work.tb_UART_TX 
-# Start time: 23:57:21 on Nov 13,2023
+# Start time: 10:42:38 on Nov 16,2023
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading std.standard
 # Loading std.textio(body)
@@ -21,13 +21,16 @@
 # Loading ieee.numeric_std(body)
 # Loading work.tb_uart_tx(rtl)#1
 add wave -position end  sim:/tb_uart_tx/i_TX_Data
+add wave -position end  sim:/tb_uart_tx/i_Parity_Sel
 add wave -position end  sim:/tb_uart_tx/i_CLK
 add wave -position end  sim:/tb_uart_tx/i_TX_Start
 add wave -position end  sim:/tb_uart_tx/o_Busy
 add wave -position end  sim:/tb_uart_tx/o_TX_Done
 add wave -position end  sim:/tb_uart_tx/o_TX_Serial
 add wave -position end  sim:/tb_uart_tx/r_Parity_Value
-add wave -position end  sim:/tb_uart_tx/U1/r_SM_Main
 run
-# End time: 23:59:12 on Nov 13,2023, Elapsed time: 0:01:51
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run
+# End time: 13:59:05 on Nov 16,2023, Elapsed time: 3:16:27
 # Errors: 0, Warnings: 0
