@@ -1,5 +1,5 @@
 Analysis & Synthesis report for UART_RX
-Sun Nov 26 00:42:43 2023
+Sun Nov 26 22:47:52 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -10,7 +10,17 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |UART_RX|r_SM_Main
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |UART_RX
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -37,20 +47,20 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Sun Nov 26 00:42:43 2023              ;
+; Analysis & Synthesis Status        ; Successful - Sun Nov 26 22:47:52 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; UART_RX                                        ;
 ; Top-level Entity Name              ; UART_RX                                        ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; N/A until Partition Merge                      ;
-;     Total combinational functions  ; N/A until Partition Merge                      ;
-;     Dedicated logic registers      ; N/A until Partition Merge                      ;
-; Total registers                    ; N/A until Partition Merge                      ;
-; Total pins                         ; N/A until Partition Merge                      ;
-; Total virtual pins                 ; N/A until Partition Merge                      ;
-; Total memory bits                  ; N/A until Partition Merge                      ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                      ;
-; Total PLLs                         ; N/A until Partition Merge                      ;
+; Total logic elements               ; 82                                             ;
+;     Total combinational functions  ; 81                                             ;
+;     Dedicated logic registers      ; 39                                             ;
+; Total registers                    ; 39                                             ;
+; Total pins                         ; 14                                             ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
 +------------------------------------+------------------------------------------------+
 
 
@@ -149,11 +159,159 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                              ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
+; UART_RX.vhd                      ; yes             ; User VHDL File  ; /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/UARTpkg/UART_RX/UART_RX.vhd ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 82          ;
+;                                             ;             ;
+; Total combinational functions               ; 81          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 42          ;
+;     -- 3 input functions                    ; 24          ;
+;     -- <=2 input functions                  ; 15          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 73          ;
+;     -- arithmetic mode                      ; 8           ;
+;                                             ;             ;
+; Total registers                             ; 39          ;
+;     -- Dedicated logic registers            ; 39          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 14          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; i_CLK~input ;
+; Maximum fan-out                             ; 39          ;
+; Total fan-out                               ; 395         ;
+; Average fan-out                             ; 2.67        ;
++---------------------------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; |UART_RX                   ; 81 (81)             ; 39 (39)                   ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |UART_RX            ; UART_RX     ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |UART_RX|r_SM_Main                                                                                                                                                               ;
++--------------------------+-------------------+---------------------+--------------------------+-------------------------+--------------------------+--------------------------+------------------+
+; Name                     ; r_SM_Main.s_Error ; r_SM_Main.s_Cleanup ; r_SM_Main.s_Parity_Check ; r_SM_Main.s_Rx_Stop_Bit ; r_SM_Main.s_RX_Data_Bits ; r_SM_Main.s_RX_Start_Bit ; r_SM_Main.s_Idle ;
++--------------------------+-------------------+---------------------+--------------------------+-------------------------+--------------------------+--------------------------+------------------+
+; r_SM_Main.s_Idle         ; 0                 ; 0                   ; 0                        ; 0                       ; 0                        ; 0                        ; 0                ;
+; r_SM_Main.s_RX_Start_Bit ; 0                 ; 0                   ; 0                        ; 0                       ; 0                        ; 1                        ; 1                ;
+; r_SM_Main.s_RX_Data_Bits ; 0                 ; 0                   ; 0                        ; 0                       ; 1                        ; 0                        ; 1                ;
+; r_SM_Main.s_Rx_Stop_Bit  ; 0                 ; 0                   ; 0                        ; 1                       ; 0                        ; 0                        ; 1                ;
+; r_SM_Main.s_Parity_Check ; 0                 ; 0                   ; 1                        ; 0                       ; 0                        ; 0                        ; 1                ;
+; r_SM_Main.s_Cleanup      ; 0                 ; 1                   ; 0                        ; 0                       ; 0                        ; 0                        ; 1                ;
+; r_SM_Main.s_Error        ; 1                 ; 0                   ; 0                        ; 0                       ; 0                        ; 0                        ; 1                ;
++--------------------------+-------------------+---------------------+--------------------------+-------------------------+--------------------------+--------------------------+------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 39    ;
+; Number of registers using Synchronous Clear  ; 9     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; r_RX_Data                              ; 13      ;
+; r_RX_Data_R                            ; 1       ;
+; Total number of inverted registers = 2 ;         ;
++----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |UART_RX|r_Bit_Index[1]    ;
+; 9:1                ; 9 bits    ; 54 LEs        ; 9 LEs                ; 45 LEs                 ; Yes        ; |UART_RX|r_CLK_Count[5]    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |UART_RX|r_SM_Main         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |UART_RX ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; g_CLKS_PER_BIT ; 434   ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 14                          ;
+; cycloneiii_ff         ; 39                          ;
+;     ENA               ; 7                           ;
+;     ENA SCLR          ; 9                           ;
+;     plain             ; 23                          ;
+; cycloneiii_lcell_comb ; 81                          ;
+;     arith             ; 8                           ;
+;         2 data inputs ; 8                           ;
+;     normal            ; 73                          ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 24                          ;
+;         4 data inputs ; 42                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.27                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -162,17 +320,30 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Sun Nov 26 00:42:38 2023
+    Info: Processing started: Sun Nov 26 22:47:46 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off UART_RX -c UART_RX
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
-Error (10500): VHDL syntax error at UART_RX.vhd(53) near text "with";  expecting "end", or "(", or an identifier ("with" is a reserved keyword), or a sequential statement File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/UARTpkg/UART_RX/UART_RX.vhd Line: 53
-Error (10500): VHDL syntax error at UART_RX.vhd(54) near text "when";  expecting ";" File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/UARTpkg/UART_RX/UART_RX.vhd Line: 54
-Info (12021): Found 0 design units, including 0 entities, in source file UART_RX.vhd
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
-    Error: Peak virtual memory: 415 megabytes
-    Error: Processing ended: Sun Nov 26 00:42:43 2023
-    Error: Elapsed time: 00:00:05
-    Error: Total CPU time (on all processors): 00:00:18
+Info (12021): Found 2 design units, including 1 entities, in source file UART_RX_copy.vhd
+    Info (12022): Found design unit 1: UART_RX_copy-rt1 File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/UARTpkg/UART_RX/UART_RX_copy.vhd Line: 17
+    Info (12023): Found entity 1: UART_RX_copy File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/UARTpkg/UART_RX/UART_RX_copy.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file UART_RX.vhd
+    Info (12022): Found design unit 1: UART_RX-rtl File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/UARTpkg/UART_RX/UART_RX.vhd Line: 19
+    Info (12023): Found entity 1: UART_RX File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/UARTpkg/UART_RX/UART_RX.vhd Line: 5
+Info (12127): Elaborating entity "UART_RX" for the top level hierarchy
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13049): Converted tri-state buffer "r_Parity_Value" feeding internal logic into a wire File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/UARTpkg/UART_RX/UART_RX.vhd Line: 38
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 96 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 10 output pins
+    Info (21061): Implemented 82 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 510 megabytes
+    Info: Processing ended: Sun Nov 26 22:47:52 2023
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:18
 
 

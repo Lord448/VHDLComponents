@@ -60,25 +60,25 @@ begin
     stim_proc : process
     begin
         i_RX_Serial <= '1'; --IDLE
-        wait for 50 ps;
+        wait for 20 ps;
 
         i_RX_Serial <= '0'; --Start bit
-        wait for 10 ps;
+        wait for 20 ps;
 
         for i in 0 to 7 loop --Data
             i_RX_Serial <= '1'; 
-            wait for 10 ps;
+            wait for 20 ps;
         end loop;
 
         case r_Parity is --Parity
             when t_None =>
             when others =>
                 i_RX_Serial <= '0'; 
-                wait for 10 ps;
+                wait for 20 ps;
         end case;
 
         i_RX_Serial <= '1'; --Stop
-        wait for 10 ps;
+        wait for 20 ps;
 
     end process;
 

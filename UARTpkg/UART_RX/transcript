@@ -13,7 +13,7 @@
 # //  18 U.S.C. Section 1905.
 # //
 # vsim -t 1ps work.tb_UART_RX 
-# Start time: 20:41:18 on Nov 26,2023
+# Start time: 21:20:36 on Nov 26,2023
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading std.standard
 # Loading std.textio(body)
@@ -27,10 +27,8 @@ add wave -position end  sim:/tb_uart_rx/o_RX_Done
 add wave -position end  sim:/tb_uart_rx/o_RX_Error
 add wave -position end  sim:/tb_uart_rx/o_RX_Byte
 add wave -position end  sim:/tb_uart_rx/r_Parity
-add wave -position end  sim:/tb_uart_rx/U1/r_RX_Data
 add wave -position end  sim:/tb_uart_rx/U1/r_SM_Main
-add wave -position end  sim:/tb_uart_rx/U1/r_RX_Data_R
+add wave -position end  sim:/tb_uart_rx/U1/r_CLK_Count
 run
-run
-# End time: 20:42:20 on Nov 26,2023, Elapsed time: 0:01:02
+# End time: 21:21:05 on Nov 26,2023, Elapsed time: 0:00:29
 # Errors: 0, Warnings: 0
