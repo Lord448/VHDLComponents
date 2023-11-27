@@ -1,0 +1,108 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+!s11e MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/UARTpkg/UART_RX
+T_opt
+!s110 1701052878
+VnIoRe]><[nXK<ANgFDklM3
+04 10 3 work tb_uart_rx rtl 1
+=1-000ae431a4f1-656401ce-b8c31-e8f6
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Etb_uart_rx
+Z2 w1701052650
+Z3 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 18
+R1
+Z6 8tb_UART_RX.vhd
+Z7 Ftb_UART_RX.vhd
+l0
+L5 1
+VIaWTJ;YX4Sjz>QKA_nXh40
+!s100 RoAodRoH=Za=4K1j[K]LC2
+Z8 OL;C;2021.2;73
+32
+Z9 !s110 1701052876
+!i10b 1
+Z10 !s108 1701052876.000000
+Z11 !s90 UART_RX.vhd|tb_UART_RX.vhd|
+Z12 !s107 tb_UART_RX.vhd|UART_RX.vhd|
+!i113 0
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R3
+R4
+R5
+DEx4 work 10 tb_uart_rx 0 22 IaWTJ;YX4Sjz>QKA_nXh40
+!i122 18
+l36
+L8 83
+V:Lck>mDlT`>8>[hgLKWjj3
+!s100 Uzjn:25gn`Yfc=iZ[=6DO1
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+Euart_rx
+Z14 w1701052869
+R3
+R4
+R5
+!i122 18
+R1
+Z15 8UART_RX.vhd
+Z16 FUART_RX.vhd
+l0
+L5 1
+VQGm<MhB<PV;U<PihS_XTd1
+!s100 k?:b:3lDACW8G11YlbBfI3
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+Artl
+R3
+R4
+R5
+DEx4 work 7 uart_rx 0 22 QGm<MhB<PV;U<PihS_XTd1
+!i122 18
+l48
+L20 225
+VHMh0:CPOoJdkB5nmcXZia1
+!s100 A;:J^Y>8Z`@PjF^1Ebz]H2
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
