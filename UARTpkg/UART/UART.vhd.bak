@@ -226,7 +226,7 @@ begin
                         r_SM_RX <= s_Data_Bits_RX;
                      else
                         r_RX_CLK_Count            <= 0;
-                        r_RX_Data(r_RX_Bit_Index) <= r_RX_Bit;
+                        r_RX_Data(r_RX_Bit_Index) <= r_RX_Data;
                         if r_RX_Bit_Index < 7 then
                             r_RX_Bit_Index <= r_RX_Bit_Index + 1;
                             r_SM_RX   <= s_Data_Bits_RX;

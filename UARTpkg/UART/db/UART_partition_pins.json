@@ -1,0 +1,113 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "o_TX_Serial",
+					"strict" : false
+				},
+				{
+					"name" : "o_TX_Done",
+					"strict" : false
+				},
+				{
+					"name" : "o_RX_Done",
+					"strict" : false
+				},
+				{
+					"name" : "o_RX_Data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "o_RX_Data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "o_RX_Data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "o_RX_Data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "o_RX_Data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "o_RX_Data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "o_RX_Data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "o_RX_Data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "o_RX_Error",
+					"strict" : false
+				},
+				{
+					"name" : "o_TX_Busy",
+					"strict" : false
+				},
+				{
+					"name" : "i_Parity_Sel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "i_Parity_Sel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "i_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "i_TX_Data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "i_TX_Start",
+					"strict" : false
+				},
+				{
+					"name" : "i_TX_Data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "i_TX_Data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "i_TX_Data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "i_TX_Data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "i_TX_Data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "i_TX_Data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "i_TX_Data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "i_RX_Serial",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
