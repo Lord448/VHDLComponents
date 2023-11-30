@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LCDDriver
-Mon Nov 27 00:04:32 2023
+Mon Nov 27 12:00:23 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -10,21 +10,7 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |LCDDriver|PROCESADOR_LCD_REVC:U1|ESTADO
-  9. User-Specified and Inferred Latches
- 10. Registers Removed During Synthesis
- 11. Removed Registers Triggering Further Register Optimizations
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Parameter Settings for User Entity Instance: Top-level Entity: |LCDDriver
- 16. Port Connectivity Checks: "PROCESADOR_LCD_REVC:U1"
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -51,20 +37,20 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 27 00:04:32 2023          ;
+; Analysis & Synthesis Status        ; Failed - Mon Nov 27 12:00:23 2023              ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; LCDDriver                                      ;
 ; Top-level Entity Name              ; LCDDriver                                      ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 124                                            ;
-;     Total combinational functions  ; 123                                            ;
-;     Dedicated logic registers      ; 55                                             ;
-; Total registers                    ; 55                                             ;
-; Total pins                         ; 24                                             ;
-; Total virtual pins                 ; 0                                              ;
-; Total memory bits                  ; 0                                              ;
-; Embedded Multiplier 9-bit elements ; 0                                              ;
-; Total PLLs                         ; 0                                              ;
+; Total logic elements               ; N/A until Partition Merge                      ;
+;     Total combinational functions  ; N/A until Partition Merge                      ;
+;     Dedicated logic registers      ; N/A until Partition Merge                      ;
+; Total registers                    ; N/A until Partition Merge                      ;
+; Total pins                         ; N/A until Partition Merge                      ;
+; Total virtual pins                 ; N/A until Partition Merge                      ;
+; Total memory bits                  ; N/A until Partition Merge                      ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                      ;
+; Total PLLs                         ; N/A until Partition Merge                      ;
 +------------------------------------+------------------------------------------------+
 
 
@@ -159,333 +145,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-16        ;   0.0%      ;
 +----------------------------+-------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                        ;
-+----------------------------------+-----------------+-----------------------+--------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                                           ; Library ;
-+----------------------------------+-----------------+-----------------------+--------------------------------------------------------------------------------------------------------+---------+
-; LCDDriver.vhd                    ; yes             ; User VHDL File        ; /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/LCDDriver.vhd                  ;         ;
-; PROCESADOR_LCD_REVC.vhd          ; yes             ; Auto-Found VHDL File  ; /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd        ;         ;
-; CARACTERES_ESPECIALES_REVC.vhd   ; yes             ; Auto-Found VHDL File  ; /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/CARACTERES_ESPECIALES_REVC.vhd ;         ;
-+----------------------------------+-----------------+-----------------------+--------------------------------------------------------------------------------------------------------+---------+
-
-
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 124         ;
-;                                             ;             ;
-; Total combinational functions               ; 123         ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 59          ;
-;     -- 3 input functions                    ; 6           ;
-;     -- <=2 input functions                  ; 58          ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 77          ;
-;     -- arithmetic mode                      ; 46          ;
-;                                             ;             ;
-; Total registers                             ; 55          ;
-;     -- Dedicated logic registers            ; 55          ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 24          ;
-;                                             ;             ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; i_CLK~input ;
-; Maximum fan-out                             ; 55          ;
-; Total fan-out                               ; 555         ;
-; Average fan-out                             ; 2.46        ;
-+---------------------------------------------+-------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                             ;
-+-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name               ; Entity Name         ; Library Name ;
-+-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+---------------------+--------------+
-; |LCDDriver                  ; 123 (0)             ; 55 (0)                    ; 0           ; 0            ; 0       ; 0         ; 24   ; 0            ; |LCDDriver                        ; LCDDriver           ; work         ;
-;    |PROCESADOR_LCD_REVC:U1| ; 123 (123)           ; 55 (55)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LCDDriver|PROCESADOR_LCD_REVC:U1 ; PROCESADOR_LCD_REVC ; work         ;
-+-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  One-Hot
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |LCDDriver|PROCESADOR_LCD_REVC:U1|ESTADO                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ;
-+------------------------------+------------+-------------+-----------------+-------------------------+-----------------+----------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+----------------+--------------+--------------+------------------------------+----------------------------+------------------+------------------+-------------------+-----------------+-----------------+---------------+---------------------+-----------------------+----------------------+---------------------+--------------------+-------------------+----------------+---------------+
-; Name                         ; ESTADO.FIN ; ESTADO.NADA ; ESTADO.LEER_RAM ; ESTADO.LIMPIAR_PANTALLA ; ESTADO.ENA_CHAR ; ESTADO.INT_NUM ; ESTADO.CREAR_CHAR8 ; ESTADO.CREAR_CHAR7 ; ESTADO.CREAR_CHAR6 ; ESTADO.CREAR_CHAR5 ; ESTADO.CREAR_CHAR4 ; ESTADO.CREAR_CHAR3 ; ESTADO.CREAR_CHAR2 ; ESTADO.CREAR_CHAR1 ; ESTADO.POS_RAM ; ESTADO.ENA_I ; ESTADO.ENA_D ; ESTADO.CORRIMIENTO_IZQUIERDA ; ESTADO.CORRIMIENTO_DERECHA ; ESTADO.BUCLE_FIN ; ESTADO.BUCLE_INI ; ESTADO.CHAR_ASCII ; ESTADO.CD_SHIFT ; ESTADO.POSICION ; ESTADO.ENABLE ; ESTADO.ESCRIBIR_LCD ; ESTADO.CLEAR_DISPLAY2 ; ESTADO.CLEAR_DISPLAY ; ESTADO.CURSOR_HOME2 ; ESTADO.CURSOR_HOME ; ESTADO.CURSOR_LCD ; ESTADO.INI_LCD ; ESTADO.CHECAR ;
-+------------------------------+------------+-------------+-----------------+-------------------------+-----------------+----------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+----------------+--------------+--------------+------------------------------+----------------------------+------------------+------------------+-------------------+-----------------+-----------------+---------------+---------------------+-----------------------+----------------------+---------------------+--------------------+-------------------+----------------+---------------+
-; ESTADO.CHECAR                ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 0             ;
-; ESTADO.INI_LCD               ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 1              ; 1             ;
-; ESTADO.CURSOR_LCD            ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 1                 ; 0              ; 1             ;
-; ESTADO.CURSOR_HOME           ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 1                  ; 0                 ; 0              ; 1             ;
-; ESTADO.CURSOR_HOME2          ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 1                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.CLEAR_DISPLAY         ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 1                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.CLEAR_DISPLAY2        ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 1                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.ESCRIBIR_LCD          ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 1                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.ENABLE                ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 1             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.POSICION              ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 1               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.CD_SHIFT              ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 1               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.CHAR_ASCII            ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 1                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.BUCLE_INI             ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 1                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.BUCLE_FIN             ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 1                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.CORRIMIENTO_DERECHA   ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 1                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.CORRIMIENTO_IZQUIERDA ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 1                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.ENA_D                 ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 1            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.ENA_I                 ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 1            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.POS_RAM               ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.CREAR_CHAR1           ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.CREAR_CHAR2           ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.CREAR_CHAR3           ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.CREAR_CHAR4           ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.CREAR_CHAR5           ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.CREAR_CHAR6           ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.CREAR_CHAR7           ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.CREAR_CHAR8           ; 0          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 1                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.INT_NUM               ; 0          ; 0           ; 0               ; 0                       ; 0               ; 1              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.ENA_CHAR              ; 0          ; 0           ; 0               ; 0                       ; 1               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.LIMPIAR_PANTALLA      ; 0          ; 0           ; 0               ; 1                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.LEER_RAM              ; 0          ; 0           ; 1               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.NADA                  ; 0          ; 1           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-; ESTADO.FIN                   ; 1          ; 0           ; 0               ; 0                       ; 0               ; 0              ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0                  ; 0              ; 0            ; 0            ; 0                            ; 0                          ; 0                ; 0                ; 0                 ; 0               ; 0               ; 0             ; 0                   ; 0                     ; 0                    ; 0                   ; 0                  ; 0                 ; 0              ; 1             ;
-+------------------------------+------------+-------------+-----------------+-------------------------+-----------------+----------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+----------------+--------------+--------------+------------------------------+----------------------------+------------------+------------------+-------------------+-----------------+-----------------+---------------+---------------------+-----------------------+----------------------+---------------------+--------------------+-------------------+----------------+---------------+
-
-
-+---------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                           ;
-+----------------------------------------------------+---------------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal             ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------------------+------------------------+
-; PROCESADOR_LCD_REVC:U1|DATA_A[2]                   ; PROCESADOR_LCD_REVC:U1|WideOr37 ; yes                    ;
-; PROCESADOR_LCD_REVC:U1|DATA_A[3]                   ; PROCESADOR_LCD_REVC:U1|WideOr37 ; yes                    ;
-; PROCESADOR_LCD_REVC:U1|DATA_A[4]                   ; PROCESADOR_LCD_REVC:U1|WideOr37 ; yes                    ;
-; Number of user-specified and inferred latches = 3  ;                                 ;                        ;
-+----------------------------------------------------+---------------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+--------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                       ;
-+---------------------------------------------------------------+----------------------------------------------------------+
-; Register name                                                 ; Reason for Removal                                       ;
-+---------------------------------------------------------------+----------------------------------------------------------+
-; PROCESADOR_LCD_REVC:U1|VEC_ASCII[0..7]                        ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|DELAY_COR2[26..30]                     ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|RW                                     ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|VEC_POS[2,6]                           ; Merged with PROCESADOR_LCD_REVC:U1|VEC_POS[3]            ;
-; PROCESADOR_LCD_REVC:U1|VEC_POS[0,7]                           ; Merged with PROCESADOR_LCD_REVC:U1|VEC_POS[1]            ;
-; PROCESADOR_LCD_REVC:U1|VEC_C_CHAR[2,6,18,22,26,30,38]         ; Merged with PROCESADOR_LCD_REVC:U1|VEC_L_RAM[0]          ;
-; PROCESADOR_LCD_REVC:U1|VEC_L_RAM[2]                           ; Merged with PROCESADOR_LCD_REVC:U1|VEC_L_RAM[0]          ;
-; PROCESADOR_LCD_REVC:U1|VEC_C_CHAR[10,16,34]                   ; Merged with PROCESADOR_LCD_REVC:U1|VEC_L_RAM[0]          ;
-; PROCESADOR_LCD_REVC:U1|VEC_RAM[2]                             ; Merged with PROCESADOR_LCD_REVC:U1|VEC_L_RAM[0]          ;
-; PROCESADOR_LCD_REVC:U1|VEC_C_CHAR[0,4,8,13,20,24,28,32,36]    ; Merged with PROCESADOR_LCD_REVC:U1|VEC_L_RAM[0]          ;
-; PROCESADOR_LCD_REVC:U1|VEC_L_RAM[4]                           ; Merged with PROCESADOR_LCD_REVC:U1|VEC_L_RAM[0]          ;
-; PROCESADOR_LCD_REVC:U1|VEC_RAM[0]                             ; Merged with PROCESADOR_LCD_REVC:U1|VEC_L_RAM[0]          ;
-; PROCESADOR_LCD_REVC:U1|VEC_C_CHAR[12]                         ; Merged with PROCESADOR_LCD_REVC:U1|VEC_L_RAM[0]          ;
-; PROCESADOR_LCD_REVC:U1|VEC_RAM[4,7]                           ; Merged with PROCESADOR_LCD_REVC:U1|VEC_L_RAM[0]          ;
-; PROCESADOR_LCD_REVC:U1|VEC_L_RAM[7]                           ; Merged with PROCESADOR_LCD_REVC:U1|VEC_L_RAM[0]          ;
-; PROCESADOR_LCD_REVC:U1|VEC_C_CHAR[17]                         ; Merged with PROCESADOR_LCD_REVC:U1|VEC_L_RAM[0]          ;
-; PROCESADOR_LCD_REVC:U1|VEC_RAM[3]                             ; Merged with PROCESADOR_LCD_REVC:U1|VEC_L_RAM[0]          ;
-; PROCESADOR_LCD_REVC:U1|VEC_C_CHAR[1,19,21]                    ; Merged with PROCESADOR_LCD_REVC:U1|VEC_L_RAM[0]          ;
-; PROCESADOR_LCD_REVC:U1|VEC_L_RAM[5]                           ; Merged with PROCESADOR_LCD_REVC:U1|VEC_L_RAM[0]          ;
-; PROCESADOR_LCD_REVC:U1|VEC_C_CHAR[3,23,25]                    ; Merged with PROCESADOR_LCD_REVC:U1|VEC_L_RAM[0]          ;
-; PROCESADOR_LCD_REVC:U1|VEC_L_RAM[1]                           ; Merged with PROCESADOR_LCD_REVC:U1|VEC_L_RAM[0]          ;
-; PROCESADOR_LCD_REVC:U1|VEC_C_CHAR[5,27,29]                    ; Merged with PROCESADOR_LCD_REVC:U1|VEC_L_RAM[0]          ;
-; PROCESADOR_LCD_REVC:U1|VEC_RAM[1]                             ; Merged with PROCESADOR_LCD_REVC:U1|VEC_L_RAM[0]          ;
-; PROCESADOR_LCD_REVC:U1|VEC_C_CHAR[7,31,33]                    ; Merged with PROCESADOR_LCD_REVC:U1|VEC_L_RAM[0]          ;
-; PROCESADOR_LCD_REVC:U1|VEC_L_RAM[3]                           ; Merged with PROCESADOR_LCD_REVC:U1|VEC_L_RAM[0]          ;
-; PROCESADOR_LCD_REVC:U1|VEC_C_CHAR[9,11,15,35,37,39]           ; Merged with PROCESADOR_LCD_REVC:U1|VEC_L_RAM[0]          ;
-; PROCESADOR_LCD_REVC:U1|VEC_RAM[5]                             ; Merged with PROCESADOR_LCD_REVC:U1|VEC_L_RAM[0]          ;
-; PROCESADOR_LCD_REVC:U1|VEC_L_RAM[6]                           ; Merged with PROCESADOR_LCD_REVC:U1|VEC_L_RAM[0]          ;
-; PROCESADOR_LCD_REVC:U1|VEC_C_CHAR[14]                         ; Merged with PROCESADOR_LCD_REVC:U1|VEC_L_RAM[0]          ;
-; PROCESADOR_LCD_REVC:U1|VEC_RAM[6]                             ; Merged with PROCESADOR_LCD_REVC:U1|VEC_L_RAM[0]          ;
-; PROCESADOR_LCD_REVC:U1|VEC_SHIFT[1..7]                        ; Merged with PROCESADOR_LCD_REVC:U1|VEC_SHIFT[0]          ;
-; PROCESADOR_LCD_REVC:U1|VEC_CHAR[5,7]                          ; Merged with PROCESADOR_LCD_REVC:U1|VEC_CHAR[0]           ;
-; PROCESADOR_LCD_REVC:U1|BD_LCD[5..7]                           ; Merged with PROCESADOR_LCD_REVC:U1|BD_LCD[4]             ;
-; PROCESADOR_LCD_REVC:U1|VEC_POS[1]                             ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|VEC_SHIFT[0]                           ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|VEC_L_RAM[0]                           ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|VEC_CHAR[2,3]                          ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|VEC_POS[3..5]                          ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|DELAY_COR2[1..6,10..13,17,18,20,21,25] ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|VEC_CHAR[6]                            ; Merged with PROCESADOR_LCD_REVC:U1|VEC_CHAR[4]           ;
-; PROCESADOR_LCD_REVC:U1|VEC_CHAR[4]                            ; Merged with PROCESADOR_LCD_REVC:U1|VEC_CHAR[1]           ;
-; PROCESADOR_LCD_REVC:U1|VEC_CHAR[1]                            ; Merged with PROCESADOR_LCD_REVC:U1|VEC_CHAR[0]           ;
-; PROCESADOR_LCD_REVC:U1|DELAY_COR2[0,7..9,14..16,19,22,23]     ; Merged with PROCESADOR_LCD_REVC:U1|DELAY_COR2[24]        ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.CD_SHIFT                        ; Merged with PROCESADOR_LCD_REVC:U1|ESTADO.BUCLE_FIN      ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.CHAR_ASCII                      ; Merged with PROCESADOR_LCD_REVC:U1|ESTADO.BUCLE_FIN      ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.ENA_CHAR                        ; Merged with PROCESADOR_LCD_REVC:U1|ESTADO.BUCLE_FIN      ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.ESCRIBIR_LCD                    ; Merged with PROCESADOR_LCD_REVC:U1|ESTADO.BUCLE_FIN      ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.LEER_RAM                        ; Merged with PROCESADOR_LCD_REVC:U1|ESTADO.BUCLE_FIN      ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.LIMPIAR_PANTALLA                ; Merged with PROCESADOR_LCD_REVC:U1|ESTADO.BUCLE_FIN      ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.NADA                            ; Merged with PROCESADOR_LCD_REVC:U1|ESTADO.BUCLE_FIN      ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.POSICION                        ; Merged with PROCESADOR_LCD_REVC:U1|ESTADO.BUCLE_FIN      ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.POS_RAM                         ; Merged with PROCESADOR_LCD_REVC:U1|ESTADO.BUCLE_FIN      ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.ENABLE                          ; Merged with PROCESADOR_LCD_REVC:U1|ESTADO.CLEAR_DISPLAY2 ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.FIN                             ; Merged with PROCESADOR_LCD_REVC:U1|ESTADO.CLEAR_DISPLAY2 ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.INT_NUM                         ; Merged with PROCESADOR_LCD_REVC:U1|ESTADO.CLEAR_DISPLAY2 ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.CLEAR_DISPLAY2                  ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|DELAY_COR2[24]                         ; Merged with PROCESADOR_LCD_REVC:U1|DELAY_COR2[31]        ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.INI_LCD                         ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.BUCLE_FIN                       ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|VEC_CHAR[0]                            ; Stuck at GND due to stuck port clock_enable              ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.CLEAR_DISPLAY                   ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.BUCLE_INI                       ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.CREAR_CHAR1                     ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.CURSOR_HOME                     ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.CREAR_CHAR2                     ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.CURSOR_LCD                      ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.CREAR_CHAR3                     ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|BD_LCD[1,2,4]                          ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.CREAR_CHAR4                     ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.CREAR_CHAR5                     ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.CREAR_CHAR6                     ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.CREAR_CHAR7                     ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.CREAR_CHAR8                     ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|RS                                     ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.CURSOR_HOME2                    ; Stuck at GND due to stuck port data_in                   ;
-; PROCESADOR_LCD_REVC:U1|BD_LCD[0,3]                            ; Stuck at GND due to stuck port data_in                   ;
-; Total Number of Removed Registers = 157                       ;                                                          ;
-+---------------------------------------------------------------+----------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                ;
-+----------------------------------------------+---------------------------+---------------------------------------------------------------------------------+
-; Register name                                ; Reason for Removal        ; Registers Removed due to This Register                                          ;
-+----------------------------------------------+---------------------------+---------------------------------------------------------------------------------+
-; PROCESADOR_LCD_REVC:U1|ESTADO.CLEAR_DISPLAY2 ; Stuck at GND              ; PROCESADOR_LCD_REVC:U1|ESTADO.INI_LCD, PROCESADOR_LCD_REVC:U1|ESTADO.BUCLE_INI, ;
-;                                              ; due to stuck port data_in ; PROCESADOR_LCD_REVC:U1|ESTADO.CREAR_CHAR1,                                      ;
-;                                              ;                           ; PROCESADOR_LCD_REVC:U1|ESTADO.CREAR_CHAR2,                                      ;
-;                                              ;                           ; PROCESADOR_LCD_REVC:U1|ESTADO.CURSOR_LCD,                                       ;
-;                                              ;                           ; PROCESADOR_LCD_REVC:U1|ESTADO.CREAR_CHAR3, PROCESADOR_LCD_REVC:U1|BD_LCD[1],    ;
-;                                              ;                           ; PROCESADOR_LCD_REVC:U1|BD_LCD[2], PROCESADOR_LCD_REVC:U1|BD_LCD[4],             ;
-;                                              ;                           ; PROCESADOR_LCD_REVC:U1|ESTADO.CREAR_CHAR4,                                      ;
-;                                              ;                           ; PROCESADOR_LCD_REVC:U1|ESTADO.CREAR_CHAR5,                                      ;
-;                                              ;                           ; PROCESADOR_LCD_REVC:U1|ESTADO.CREAR_CHAR6,                                      ;
-;                                              ;                           ; PROCESADOR_LCD_REVC:U1|ESTADO.CREAR_CHAR7,                                      ;
-;                                              ;                           ; PROCESADOR_LCD_REVC:U1|ESTADO.CURSOR_HOME2, PROCESADOR_LCD_REVC:U1|BD_LCD[0],   ;
-;                                              ;                           ; PROCESADOR_LCD_REVC:U1|BD_LCD[3]                                                ;
-; PROCESADOR_LCD_REVC:U1|ESTADO.BUCLE_FIN      ; Stuck at GND              ; PROCESADOR_LCD_REVC:U1|RS                                                       ;
-;                                              ; due to stuck port data_in ;                                                                                 ;
-+----------------------------------------------+---------------------------+---------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 55    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 50    ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+------------------------------------------------------+
-; Inverted Register Statistics                         ;
-+--------------------------------------------+---------+
-; Inverted Register                          ; Fan out ;
-+--------------------------------------------+---------+
-; PROCESADOR_LCD_REVC:U1|DELAY_COR2[31]      ; 4       ;
-; PROCESADOR_LCD_REVC:U1|CONTA_DELAY_COR[0]  ; 2       ;
-; PROCESADOR_LCD_REVC:U1|CONTA_DELAY_COR[31] ; 2       ;
-; Total number of inverted registers = 3     ;         ;
-+--------------------------------------------+---------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |LCDDriver|PROCESADOR_LCD_REVC:U1|CONTA_DELAY[2]      ;
-; 3:1                ; 30 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |LCDDriver|PROCESADOR_LCD_REVC:U1|CONTA_DELAY_COR[19] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |LCDDriver|PROCESADOR_LCD_REVC:U1|CONTA_DELAY_COR[31] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |LCDDriver|PROCESADOR_LCD_REVC:U1|ESTADO              ;
-; 22:1               ; 2 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; No         ; |LCDDriver|PROCESADOR_LCD_REVC:U1|DATA[2]             ;
-; 22:1               ; 6 bits    ; 84 LEs        ; 48 LEs               ; 36 LEs                 ; No         ; |LCDDriver|PROCESADOR_LCD_REVC:U1|DATA[1]             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |LCDDriver ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; g_CLKS_PER_BIT ; 434   ; Signed Integer                                   ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "PROCESADOR_LCD_REVC:U1"                                                                        ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port            ; Type   ; Severity ; Details                                                                             ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; vector_mem      ; Input  ; Info     ; Stuck at GND                                                                        ;
-; inc_dir         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; delay_cor[4..3] ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; delay_cor[8..7] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; delay_cor[2..0] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; delay_cor[9]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; delay_cor[6]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; delay_cor[5]    ; Input  ; Info     ; Stuck at GND                                                                        ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 24                          ;
-; cycloneiii_ff         ; 55                          ;
-;     ENA               ; 50                          ;
-;     plain             ; 5                           ;
-; cycloneiii_lcell_comb ; 124                         ;
-;     arith             ; 46                          ;
-;         2 data inputs ; 46                          ;
-;     normal            ; 78                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 10                          ;
-;         3 data inputs ; 6                           ;
-;         4 data inputs ; 59                          ;
-;                       ;                             ;
-; Max LUT depth         ; 5.10                        ;
-; Average LUT depth     ; 3.70                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
 
 
 +-------------------------------+
@@ -494,98 +162,49 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Mon Nov 27 00:04:25 2023
+    Info: Processing started: Mon Nov 27 12:00:18 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LCDDriver -c LCDDriver
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 2 design units, including 0 entities, in source file COMANDOS_LCD_REVC.vhd
+    Info (12022): Found design unit 1: COMANDOS_LCD_REVC File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/COMANDOS_LCD_REVC.vhd Line: 10
+    Info (12022): Found design unit 2: COMANDOS_LCD_REVC-body File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/COMANDOS_LCD_REVC.vhd Line: 51
+Info (12021): Found 2 design units, including 1 entities, in source file CARACTERES_ESPECIALES_REVC.vhd
+    Info (12022): Found design unit 1: CARACTERES_ESPECIALES_REVC-Behavioral File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/CARACTERES_ESPECIALES_REVC.vhd Line: 14
+    Info (12023): Found entity 1: CARACTERES_ESPECIALES_REVC File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/CARACTERES_ESPECIALES_REVC.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file PROCESADOR_LCD_REVC.vhd
+    Info (12022): Found design unit 1: PROCESADOR_LCD_REVC-Behavioral File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 29
+    Info (12023): Found entity 1: PROCESADOR_LCD_REVC File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file LIB_LCD_INTESC_REVC.vhd
+    Info (12022): Found design unit 1: LIB_LCD_INTESC_REVC-Behavioral File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/LIB_LCD_INTESC_REVC.vhd Line: 33
+    Info (12023): Found entity 1: LIB_LCD_INTESC_REVC File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/LIB_LCD_INTESC_REVC.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file LCDDriver.vhd
-    Info (12022): Found design unit 1: LCDDriver-rtl File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 31
-    Info (12023): Found entity 1: LCDDriver File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 9
+    Info (12022): Found design unit 1: LCDDriver-rtl File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 35
+    Info (12023): Found entity 1: LCDDriver File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 8
 Info (12127): Elaborating entity "LCDDriver" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at LCDDriver.vhd(27): used implicit default value for signal "o_TX_Serial" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 27
-Warning (10541): VHDL Signal Declaration warning at LCDDriver.vhd(37): used implicit default value for signal "INST" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 37
-Warning (12125): Using design file PROCESADOR_LCD_REVC.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: PROCESADOR_LCD_REVC-Behavioral File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 29
-    Info (12023): Found entity 1: PROCESADOR_LCD_REVC File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 10
-Info (12128): Elaborating entity "PROCESADOR_LCD_REVC" for hierarchy "PROCESADOR_LCD_REVC:U1" File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 108
-Warning (10036): Verilog HDL or VHDL warning at PROCESADOR_LCD_REVC.vhd(48): object "VEC_S_CHAR" assigned a value but never read File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 48
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(789): signal "VECTOR_MEM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 789
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(791): signal "VECTOR_MEM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 791
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(793): signal "VECTOR_MEM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 793
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(808): signal "VEC_CHAR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 808
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(809): signal "VEC_CHAR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 809
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(811): signal "VEC_POS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 811
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(812): signal "VEC_POS" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 812
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(814): signal "VEC_SHIFT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 814
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(815): signal "VEC_SHIFT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 815
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(817): signal "VEC_ASCII" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 817
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(818): signal "VEC_ASCII" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 818
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(826): signal "VEC_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 826
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(827): signal "VEC_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 827
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(830): signal "VEC_C_CHAR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 830
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(831): signal "VEC_C_CHAR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 831
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(834): signal "VEC_C_CHAR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 834
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(835): signal "VEC_C_CHAR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 835
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(838): signal "VEC_C_CHAR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 838
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(839): signal "VEC_C_CHAR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 839
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(842): signal "VEC_C_CHAR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 842
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(843): signal "VEC_C_CHAR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 843
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(846): signal "VEC_C_CHAR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 846
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(847): signal "VEC_C_CHAR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 847
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(850): signal "VEC_C_CHAR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 850
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(851): signal "VEC_C_CHAR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 851
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(854): signal "VEC_C_CHAR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 854
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(855): signal "VEC_C_CHAR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 855
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(858): signal "VEC_C_CHAR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 858
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(859): signal "VEC_C_CHAR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 859
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(862): signal "VEC_L_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 862
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(863): signal "VEC_L_RAM" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 863
-Warning (10492): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(866): signal "DATA_A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 866
-Warning (10631): VHDL Process Statement warning at PROCESADOR_LCD_REVC.vhd(786): inferring latch(es) for signal or variable "DATA_A", which holds its previous value in one or more paths through the process File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 786
-Info (10041): Inferred latch for "DATA_A[0]" at PROCESADOR_LCD_REVC.vhd(786) File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 786
-Info (10041): Inferred latch for "DATA_A[1]" at PROCESADOR_LCD_REVC.vhd(786) File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 786
-Info (10041): Inferred latch for "DATA_A[2]" at PROCESADOR_LCD_REVC.vhd(786) File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 786
-Info (10041): Inferred latch for "DATA_A[3]" at PROCESADOR_LCD_REVC.vhd(786) File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 786
-Info (10041): Inferred latch for "DATA_A[4]" at PROCESADOR_LCD_REVC.vhd(786) File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 786
-Info (10041): Inferred latch for "DATA_A[5]" at PROCESADOR_LCD_REVC.vhd(786) File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 786
-Info (10041): Inferred latch for "DATA_A[6]" at PROCESADOR_LCD_REVC.vhd(786) File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 786
-Info (10041): Inferred latch for "DATA_A[7]" at PROCESADOR_LCD_REVC.vhd(786) File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 786
-Warning (12125): Using design file CARACTERES_ESPECIALES_REVC.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: CARACTERES_ESPECIALES_REVC-Behavioral File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/CARACTERES_ESPECIALES_REVC.vhd Line: 14
-    Info (12023): Found entity 1: CARACTERES_ESPECIALES_REVC File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/CARACTERES_ESPECIALES_REVC.vhd Line: 4
-Info (12128): Elaborating entity "CARACTERES_ESPECIALES_REVC" for hierarchy "CARACTERES_ESPECIALES_REVC:U2" File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 130
-Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "PROCESADOR_LCD_REVC:U1|DATA_A[4]" merged with LATCH primitive "PROCESADOR_LCD_REVC:U1|DATA_A[3]" File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/PROCESADOR_LCD_REVC.vhd Line: 786
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "RS" is stuck at GND File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 17
-    Warning (13410): Pin "RW" is stuck at GND File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 18
-    Warning (13410): Pin "DATA_LCD[0]" is stuck at GND File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 22
-    Warning (13410): Pin "DATA_LCD[1]" is stuck at GND File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 22
-    Warning (13410): Pin "DATA_LCD[5]" is stuck at GND File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 22
-    Warning (13410): Pin "DATA_LCD[6]" is stuck at GND File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 22
-    Warning (13410): Pin "DATA_LCD[7]" is stuck at GND File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 22
-    Warning (13410): Pin "BLCD[0]" is stuck at GND File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 23
-    Warning (13410): Pin "BLCD[1]" is stuck at GND File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 23
-    Warning (13410): Pin "BLCD[2]" is stuck at GND File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 23
-    Warning (13410): Pin "BLCD[3]" is stuck at GND File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 23
-    Warning (13410): Pin "BLCD[4]" is stuck at GND File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 23
-    Warning (13410): Pin "BLCD[5]" is stuck at GND File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 23
-    Warning (13410): Pin "BLCD[6]" is stuck at GND File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 23
-    Warning (13410): Pin "BLCD[7]" is stuck at GND File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 23
-    Warning (13410): Pin "o_TX_Serial" is stuck at GND File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 27
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "i_RX_Serial" File: /home/lord448/Documentos/TEC/9no/Hardware/Repo/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 26
-Info (21057): Implemented 148 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 20 output pins
-    Info (21061): Implemented 124 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 58 warnings
-    Info: Peak virtual memory: 520 megabytes
-    Info: Processing ended: Mon Nov 27 00:04:32 2023
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:18
+Warning (10036): Verilog HDL or VHDL warning at LCDDriver.vhd(120): object "r_RX_Done" assigned a value but never read File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 120
+Warning (10036): Verilog HDL or VHDL warning at LCDDriver.vhd(122): object "r_RX_Data" assigned a value but never read File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 122
+Warning (10541): VHDL Signal Declaration warning at LCDDriver.vhd(123): used implicit default value for signal "r_TX_Start" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 123
+Warning (10036): Verilog HDL or VHDL warning at LCDDriver.vhd(124): object "r_RX_Error" assigned a value but never read File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 124
+Warning (10036): Verilog HDL or VHDL warning at LCDDriver.vhd(125): object "r_TX_Busy" assigned a value but never read File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 125
+Warning (10540): VHDL Signal Declaration warning at LCDDriver.vhd(132): used explicit default value for signal "r_Debounce_Reset" because signal was never assigned a value File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 132
+Warning (10492): VHDL Process Statement warning at LCDDriver.vhd(252): signal "r_Count_Bytes" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 252
+Warning (10492): VHDL Process Statement warning at LCDDriver.vhd(255): signal "r_Count_Bytes" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 255
+Warning (10492): VHDL Process Statement warning at LCDDriver.vhd(257): signal "i_TX_Data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 257
+Warning (10492): VHDL Process Statement warning at LCDDriver.vhd(259): signal "i_TX_Data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 259
+Warning (10492): VHDL Process Statement warning at LCDDriver.vhd(261): signal "i_TX_Data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 261
+Warning (10492): VHDL Process Statement warning at LCDDriver.vhd(263): signal "i_TX_Data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 263
+Warning (10492): VHDL Process Statement warning at LCDDriver.vhd(272): signal "r_Count_Bytes" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 272
+Warning (10631): VHDL Process Statement warning at LCDDriver.vhd(249): inferring latch(es) for signal or variable "r_Count_Bytes", which holds its previous value in one or more paths through the process File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 249
+Warning (10631): VHDL Process Statement warning at LCDDriver.vhd(249): inferring latch(es) for signal or variable "r_Data_TX_Send", which holds its previous value in one or more paths through the process File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 249
+Warning (10631): VHDL Process Statement warning at LCDDriver.vhd(249): inferring latch(es) for signal or variable "r_Ready_To_Send", which holds its previous value in one or more paths through the process File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 249
+Error (10779): VHDL error at LCDDriver.vhd(282): expression is not constant File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 282
+Error (10442): VHDL Process Statement error at LCDDriver.vhd(278): Process Statement must contain either a sensitivity list or a Wait Statement File: /home/lord448/Documentos/TEC/9no/Hardware/HardwareProcessing/VHDLComponents/LCDDriver/LCDDriver.vhd Line: 278
+Error (12153): Can't elaborate top-level user hierarchy
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 17 warnings
+    Error: Peak virtual memory: 415 megabytes
+    Error: Processing ended: Mon Nov 27 12:00:23 2023
+    Error: Elapsed time: 00:00:05
+    Error: Total CPU time (on all processors): 00:00:11
 
 

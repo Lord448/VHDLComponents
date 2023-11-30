@@ -132,13 +132,12 @@ architecture rtl of LCDDriver is
     signal r_Debounce_Reset : std_logic := '1';
     signal r_Data_TX_Send   : std_logic_vector(31 downto 0);
     signal r_Ready_To_Send  : std_logic := '0';
-    signal r_MSIndex        : integer range 0 to 31 := 7;
-    signal r_MSIndex_S      : integer range 0 to 31 := 7;
-    signal r_LSIndex        : integer range 0 to 31 := 0;
-    signal r_LSIndex_S      : integer range 0 to 31 := 0;
+    signal r_MSIndex        : unsigned range 0 to 31 := 7;
+    signal r_MSIndex_S      : unsigned range 0 to 31 := 7;
+    signal r_LSIndex        : unsigned range 0 to 31 := 0;
+    signal r_LSIndex_S      : unsigned range 0 to 31 := 0;
     --signal r_CLK_Counts     : unsigned range 0 to 
-    signal r_Count_Bytes    : integer range 0 to 4 := 0;
-    signal r_Count_PSC      : integer range 0 to 65536 := 0;
+    signal r_Count_Bytes    : unsigned(3 downto 0) := (others => '0');
     
     
 
@@ -247,55 +246,35 @@ begin
         result => r_TX_Clear
     );
 
-    p_PSC : process(i_CLK)
-    begin
-        if rising_edge(i_CLK) then 
-            if r_Count_PSC < 65536 then 
-                r_Count_PSC <= r_Count_PSC + 1;
-            else
-                r_Count_PSC <= 0;
-            end if;
-        end if;
-    end process;
-
     p_Data_Sel : process (r_Set_Num, r_TX_Clear)
     begin
         if r_Set_Num = '1' then
+            r_Data_TX_Send(r_MSIndex downto r_LSIndex) <= i_TX_Data;
+            r_MSIndex <= r_MSIndex + 8;
+            r_LSIndex <= r_LSIndex + 8;
             r_Count_Bytes <= r_Count_Bytes + 1;
         end if;
 
-        case r_Count_Bytes is
-            when 1 =>
-                r_Data_TX_Send(7 downto 0) <= i_TX_Data;
-            when 2 =>
-                r_Data_TX_Send(15 downto 8) <= i_TX_Data;
-            when 3 =>
-                r_Data_TX_Send(23 downto 16) <= i_TX_Data;
-            when 4 =>
-                r_Data_TX_Send(31 downto 24) <= i_TX_Data;
-				when others =>
-        end case;
-
         if r_TX_Clear = '1' then
             r_Data_TX_Send <= (others => '0');
-            r_Count_Bytes <= 0;
+            r_MSIndex <= 7;
+            r_LSIndex <= 0;
         end if;
 
-        if r_Count_Bytes = 4 then
-            r_Count_Bytes <= 0;
+        if r_Count_Bytes = 3 then 
             r_Ready_To_Send <= '1';
         end if;
     end process;
 
-    p_UART : process (r_TX_Done)
+    p_UART : process
     begin
-        if r_TX_Done = '1' AND r_Ready_To_Send = '1' AND r_TX_Send = '1' then
-            r_TX_Data <= r_Data_TX_Send(7 downto 0);
-            if r_Count_PSC = 50 then
-            end if;
-            r_TX_Data <= r_Data_TX_Send(15 downto 8);
-            r_TX_Data <= r_Data_TX_Send(23 downto 16);
-            r_TX_Data <= r_Data_TX_Send(31 downto 24);
+        if r_TX_Done = '1' AND r_Ready_To_Send = '1' AND r_TX_Send = '1' then 
+            for i in 0 to 3 loop
+                r_TX_Data <= r_Data_TX_Send(r_MSIndex_S downto r_LSIndex_S);
+                r_MSIndex_S <= r_MSIndex_S + 8;
+                r_LSIndex_S <= r_LSIndex_S + 8;
+                wait on r_TX_Busy until r_TX_Done = '1' for 8 us;    
+            end loop;
         end if;
     end process;
 
